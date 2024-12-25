@@ -17,7 +17,28 @@
     font-family: 'Orbitron','sans-serif';
     letter-spacing: 2px;
     position: relative;
-    transition: all .2s ease;
+
+    transition: all .5s ease;
+    color: white; 
+     
+    &_active{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        width: 50vw;
+        overflow: hidden;
+        font-family: 'Orbitron','sans-serif';
+        letter-spacing: 2px;
+        color: white; 
+        position: fixed;
+        transition: all .3s ease;
+        animation: choise 3s 1 forwards;      
+        z-index: 1000; 
+        
+    }
+
+
   }
 
   .eduside:hover{
@@ -34,8 +55,8 @@
     background-color: white;
     border: 35px;
     opacity: 0.2;
-   box-shadow: 0px 0px 15px white;
-   animation: slowUp 3s 1;
+    box-shadow: 0px 0px 15px white;
+    animation: slowUp 3s 1;
 }
 
 
@@ -48,9 +69,11 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    z-index: -1;
+    z-index:0;
     
 }
+
+
 
 
 @keyframes rise{
@@ -58,7 +81,7 @@
     transform: translateY(0);
     opacity: 1;
  }
-50%{
+50%{ 
     transform: translateY(-50vh);
 }
  100%{
@@ -70,9 +93,9 @@
 }
 
 
-
 @keyframes slowUp{
-    0%{    opacity: 1;
+    0%{    
+        opacity: 1;
         width: 2px;
         height: 40vh;
         transform: translateY(80vh);
@@ -86,4 +109,45 @@
       height: 100vh;
       width: 1px;
     }
+}
+
+@keyframes choise{
+    0%{
+        width: 50vw;
+        background-color: black;
+      
+        }
+        30%{
+            width: 100vw;
+            background-color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+    50%{
+        width: 100vw;
+        background-color: black;
+        position: fixed;
+        left: 0;
+        top: 0;
+     
+    }
+   
+    70%{
+        color: white;
+        font-size: 20px;
+    }
+    100%{
+        width: 100vw;
+        background-color: black;
+        position: fixed;
+        left: 0;
+        top: 0;
+    
+       font-size: 30rem;
+        color: black;
+        
+    }
+    
+    
 }

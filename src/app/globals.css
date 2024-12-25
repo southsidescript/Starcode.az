@@ -1,15 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     /* --background: #0a0a0a; */
-    --background:black;
+    /* --background:black;
     --foreground: #ededed;
   }
-}
+} */
+
+
 
 html,
 body {
@@ -61,6 +64,24 @@ a {
   animation: slowRight 5s 1;
 }  
 
+
+
+.bubbles-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Чтобы элементы не мешали взаимодействию */
+}
+
+.bubble {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  background: green;
+  animation: anim 4s linear 1;
+  pointer-events: none;
+}
+
 @keyframes slowLeft{
   0%{
     transform: translateX(50vw);
@@ -84,22 +105,6 @@ a {
 }
 
 
-.bubbles-container {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none; /* Чтобы элементы не мешали взаимодействию */
-}
-
-.bubble {
-  position: absolute;
-  bottom: 0;
-  border-radius: 50%;
-  background: green;
-  animation: anim 4s linear 1;
-  pointer-events: none;
-}
-
 @keyframes rise {
   0% {
     transform: translateY(0) scale(1);
@@ -110,3 +115,5 @@ a {
     opacity: 0;
   }
 }
+
+

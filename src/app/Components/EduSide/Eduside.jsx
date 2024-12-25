@@ -2,12 +2,16 @@
 
 import Image from 'next/image';
 import style from '../../../styles/global.module.scss';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Bubble from '../Bubble/Bubble';
 
 const Eduside= (props) => {
+  
+const [selected,setSelected] = useState(false);
 
-
+ function choiseMode(){
+   setSelected(!selected)
+ }
 
       
    
@@ -16,11 +20,11 @@ const Eduside= (props) => {
 
 
 return(
-    <div  className={style.eduside}>
-        <span id={props.styles}>{props.name}</span>  
+    <div  className={!selected? style.eduside:style.eduside_active }      onClick={choiseMode}>
+         <span id={props.styles}>{props.name}</span>  
          <Bubble side={props.styles}/>
     </div>
-)
+) 
 
 
 }
