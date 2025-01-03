@@ -3,11 +3,27 @@ import style from "../../styles/global.module.scss";
 
 
 const Edumode = () => {
+
+
+  const data = [
+    {
+    name: 'EYECODE',
+    styles: 'eduside-left',
+    desc:'Онлайн обучение'
+    },
+    {
+       name: 'STARCODE',
+       styles: 'eduside-right',
+       desc:'Офлайн обучение'
+      }
+  ]
+
+
 return(
   <div className={style.edumode}>
-    <Eduside name={'EYECODE'} styles='eduside-left' />
+    <Eduside {...data[0]} />
       <div className={style.beam}></div>
-    <Eduside name={'STARCODE'} styles='eduside-right' />
+    <Eduside {...data[1]}/>
   </div>
 
 )

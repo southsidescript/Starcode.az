@@ -21,6 +21,7 @@ const [selected,setSelected] = useState(false);
 
 return(
     <div  className={!selected? style.eduside:style.eduside_active }      onClick={choiseMode}>
+         <div className={style.eduside_desc}>{props.desc}</div>
          <span id={props.styles}>{props.name}</span>  
          <Bubble side={props.styles}/>
     </div>
