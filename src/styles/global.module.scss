@@ -86,15 +86,24 @@
 .starcode{
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
-  align-items: center;
-  min-height: 100vh;
+    justify-content:flex-start;
+   align-items: center;
+   min-height: 100vh;
+   background-image: linear-gradient(150deg,rgb(18, 0, 41),black);
+    
+   & header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+   }
 
     &_heading{
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 20px auto;
+        margin: 20px 0px;
         text-align: center;
         align-content: center;
         font-size: 5rem;
@@ -102,7 +111,7 @@
         font-family: Arial;
         letter-spacing: 2px;
         background-clip: text;
-        background-image:linear-gradient(120deg,rgb(171, 253, 235),white) ;
+        background-image:linear-gradient(120deg,rgb(171, 253, 235),white,rgb(255, 248, 255)) ;
         
        
     

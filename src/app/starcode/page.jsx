@@ -31,7 +31,9 @@ const Starcode = () => {
        <header>
           <h1 className={style.starcode_heading}>
                 {name.map((w,s) => <span key={s} >{w}</span>  ) } 
-            </h1>
+          </h1>
+
+         
        </header>
      
         <main className={style.starcode_main}>
