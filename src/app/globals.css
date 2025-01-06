@@ -128,8 +128,8 @@ a {
 @media screen and (max-width:500px){
   body{
     background-image: radial-gradient(ellipse 15% 65% at 50% 30% ,rgba(0, 0, 255, 0.932),transparent),
-    radial-gradient(ellipse 45% 25% at 50% 70% ,blue,rgb(0, 175, 175),black,transparent),
-    radial-gradient(ellipse 70% 20% at 50% 90% ,cyan,blue,black);
+    radial-gradient(ellipse 55% 25% at 50% 70% ,blue,rgb(0, 175, 175),rgb(0, 0, 0),transparent),
+    radial-gradient(ellipse 60% 30% at 50% 90% ,cyan,blue,black);
     background-repeat: no-repeat;
 }
 }
