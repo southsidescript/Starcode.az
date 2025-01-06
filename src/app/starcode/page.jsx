@@ -8,29 +8,16 @@ import style from '../../styles/global.module.scss'
 
 const Starcode = () => {
 
-      const [name, setName  ] = useState([''])
-        
-      useEffect(() => {
-                const sentence = ['S','T','A','R','C',<span><img className={style.starcode_heading_design} src="./react.png" alt="" /></span>,'D','E'];
-                 
-                
-                sentence.forEach((value, index, array) => {
-                  setTimeout(() => {
-                    setName(current=>[...current,value])
-                  }, index * 139);
-                
-                  
-                })
-                
-
-      },[])
+    
+      const sentence = ['S','T','A','R','C',<span><img className={style.starcode_heading_design} src="./react.png" alt="" /></span>,'D','E']; 
+      
 
   
   return (<div className={style.starcode}>
 
        <header>
           <h1 className={style.starcode_heading}>
-                {name.map((w,s) => <span key={s} >{w}</span>  ) } 
+                {sentence.map((w,s) => <span key={s} >{w}</span>  ) } 
           </h1>
 
          

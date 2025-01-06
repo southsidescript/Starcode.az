@@ -89,8 +89,8 @@
     justify-content:flex-start;
    align-items: center;
    min-height: 100vh;
-   background-image: linear-gradient(150deg,rgb(18, 0, 41),black);
-    
+//    background-image: linear-gradient(150deg,rgba(78, 0, 180, 0.315),rgb(0, 0, 0));
+    backdrop-filter: blur(35px);
    & header{
     display: flex;
     align-items: center;
@@ -112,9 +112,7 @@
         letter-spacing: 2px;
         background-clip: text;
         background-image:linear-gradient(120deg,rgb(171, 253, 235),white,rgb(255, 248, 255)) ;
-        
-       
-    
+      
 
         &_design{
             width: 75px;

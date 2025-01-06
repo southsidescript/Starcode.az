@@ -4,13 +4,23 @@ import Image from 'next/image';
 import style from '../../../styles/global.module.scss';
 import { useRef, useState } from 'react';
 import Bubble from '../Bubble/Bubble';
-
+import { useRouter } from 'next/navigation';
 const Eduside= (props) => {
   
 const [selected,setSelected] = useState(false);
+  
+
+const router = useRouter();
 
  function choiseMode(){
-   setSelected(!selected)
+   
+  setSelected(!selected);
+
+  let timeout  = setTimeout(()=>{
+    router.push('/starcode');
+    clearTimeout(timeout);
+  },3000)      
+ 
  }
 
       

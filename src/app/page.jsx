@@ -9,13 +9,7 @@ export default function Home() {
   const router = useRouter();
 
  useEffect(() => {
-  
-  
-  const timeout = setTimeout(() => {
     router.push('/edumode')
- clearTimeout(timeout);
-},8000)
-
  },[])
 
   
@@ -24,12 +18,6 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-        <main className={styles.main}>
-
-          <button className={styles.push}>Starcode</button>
-          <div className={styles.gradient_ball}></div>
-
-      </main>   
     </div>
     
   );

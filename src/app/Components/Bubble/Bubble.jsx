@@ -7,7 +7,6 @@ const Bubble = (props) => {
    
     const { side } = props;
     
-    console.log(side)
 
     const [bubble,setBubbles] = React.useState([]);
       
@@ -33,7 +32,7 @@ const Bubble = (props) => {
              let timeout = setTimeout(() => { 
                 setBubbles(prev=>prev.filter(b=>b.id!==newBubble.id))
                },4000)
-              console.log(bubble)
+             
          
              
         },500);
