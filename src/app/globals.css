@@ -25,10 +25,10 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  background-image: radial-gradient(ellipse 15% 15% at center ,rgba(0, 0, 255, 0.932),transparent),
-  radial-gradient(ellipse 35% 35% at 50% 70% ,blue,rgb(0, 167, 167),black,transparent),
-  radial-gradient(ellipse 30% 30% at 50% 100% ,cyan,blue,black);
-                    
+  background-image: radial-gradient(ellipse 100px 600px at center ,rgba(0, 0, 255, 0.932),transparent),
+  radial-gradient(ellipse 500px 500px at 50% 70% ,blue,rgb(0, 167, 167),black,transparent),
+  radial-gradient(ellipse 600px 600px at 50% 100% ,cyan,blue,black);
+                 
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -111,6 +111,7 @@ a {
 }
 
 
+
 @keyframes rise {
   0% {
     transform: translateY(0) scale(1);
@@ -126,8 +127,9 @@ a {
 
 @media screen and (max-width:500px){
   body{
-    background-image: radial-gradient(ellipse 15% 15% at center ,rgba(0, 0, 255, 0.932),transparent),
-    radial-gradient(ellipse 35% 25% at 50% 70% ,blue,rgb(0, 167, 167),black,transparent),
-    radial-gradient(ellipse 40% 40% at 50% 90% ,cyan,blue,black);
+    background-image: radial-gradient(ellipse 15% 65% at 50% 30% ,rgba(0, 0, 255, 0.932),transparent),
+    radial-gradient(ellipse 45% 25% at 50% 70% ,blue,rgb(0, 175, 175),black,transparent),
+    radial-gradient(ellipse 70% 20% at 50% 90% ,cyan,blue,black);
+    background-repeat: no-repeat;
 }
 }
