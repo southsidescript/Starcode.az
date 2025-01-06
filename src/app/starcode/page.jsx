@@ -2,6 +2,7 @@
 import react, { useEffect, useState } from "react";
 import Bot from "../Components/Bot/Bot";
 import style from '../../styles/global.module.scss'
+import Form from "../Components/Form/Form";
 
 
 
@@ -13,7 +14,8 @@ const Starcode = () => {
       
 
   
-  return (<div className={style.starcode}>
+  return (
+  <div className={style.starcode}>
 
        <header>
           <h1 className={style.starcode_heading}>
@@ -23,14 +25,15 @@ const Starcode = () => {
          
        </header>
      
-        <main className={style.starcode_main}>
+        <div className={style.starcode_main}>
             <div className={style.starcode_title}>
                   Texnologiyalar dünyasını kəşf et — gələcəyini təmin et
             </div>
 
+           
 
             <button className={style.starcode_start}>Ilk addimini et</button>
-        </main>
+        </div>
        
         
     <Bot/>
