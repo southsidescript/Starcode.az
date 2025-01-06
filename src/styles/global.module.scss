@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     overflow-x: hidden;
+    background: black;
 }
 
 .edumode::-webkit-scrollbar{
@@ -249,11 +250,7 @@
 
 @media screen and (max-width:500px){
    
-    body{
-        background-image: radial-gradient(ellipse 15% 15% at center ,rgba(0, 0, 255, 0.932),transparent),
-        radial-gradient(ellipse 35% 25% at 50% 70% ,blue,rgb(0, 167, 167),black,transparent),
-        radial-gradient(ellipse 40% 40% at 50% 90% ,cyan,blue,black);
-    }
+ 
 
    .starcode{
      min-height: 90vh; 
