@@ -85,13 +85,22 @@
 
 
 .starcode{
-    position: relative;
-  display: flex;
-  flex-direction: column;
+    position: relative !important;
+    display: flex;
+    flex-direction: column;
     justify-content:flex-start;
-   align-items: center;
-   min-height: 100vh;
-   backdrop-filter: blur(75px);
+    align-items: center;
+    min-height: 100vh;
+
+  
+  &::after{
+    position: absolute;
+    backdrop-filter: blur(75px);
+    z-index: -2;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+  }
 
    animation: blur 3s 1 linear;
 //    background-image: linear-gradient(150deg,rgba(78, 0, 180, 0.315),rgb(0, 0, 0));
@@ -104,6 +113,10 @@
     margin: 0 auto;
 
    }
+
+
+
+
 
     &_heading{
         
@@ -176,7 +189,9 @@
     align-items: center;
     position: relative;
   overflow: hidden;
+  
 
+ 
     
   &_close{
     position: absolute;
@@ -290,6 +305,184 @@ transition: all .3s ease;
         }
    }
 }
+
+
+.bot{
+    position: fixed;
+    bottom: 0px; 
+    left: 50%;
+    transform: translateX(-50%);
+    animation: infinityPath 3s ease-in-out;
+     transition: all .2s ease;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover{
+       opacity: 1;
+       transform: translateY(-10px) translateX(-50%);
+    }
+    
+    &_sent{
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      animation: fade 5s 1;
+      color: white;
+      text-transform: uppercase;
+     
+
+      font-size: 10px;
+      text-align: center;
+      align-content: center;
+      letter-spacing: 1px;
+      backdrop-filter: blur(10px);
+      position: fixed;
+       width: 30vw;
+       left: calc(50% - 15vw);
+       top: calc(50% - 15%);
+       height:30%;
+       background-color: rgba(0, 0, 0, 0.1);
+       box-shadow: 0px 0px 5px rgb(0, 0, 102);
+       border-radius: 15px;
+       overflow: hidden;
+    
+     
+       &::after{
+        animation: linetoright 5s infinite;
+        content: '';
+        width:300px;
+        height: 1px;
+        background-color: blue;
+        box-shadow: 0px 0px 5px 1px blue;
+        position: absolute;
+        top: 0;
+        left:0;
+       }
+    
+       &::before{
+        animation: linetoleft 5s infinite;
+        content: '';
+        width: 300px;
+        height: 1px;
+        background-color: blue;
+        box-shadow: 0px 0px 5px 1px blue;
+        position: absolute;
+        bottom: 0;
+        right:0;
+       }
+    }
+        
+    & img{
+            width: 100px;
+      
+        }
+       &:after{
+          content: 'Привет!Если возникли вопросы нажми на меня!';
+          text-align: center;
+          align-content: center;
+          color: black;
+          font-size: 12px;
+          width: 150px;
+          font-family: monospace;
+          height: 50px;
+          border-radius: 5px;
+          background-color: white;
+          position: absolute;
+          top: -40%;
+          left:60%;
+          animation: blinkbot 10s 1 forwards;
+        }
+    
+    }
+
+    @keyframes linetoleft{
+        0%{
+          transform: translateX(300px);
+        }
+        100%{
+          transform: translateX(-35vw);
+        }
+      }
+      
+      @keyframes linetoright{
+        0%{
+          transform: translateX(-300px);
+        }
+        100%{
+          transform: translateX(35vw);
+        }
+      }
+      
+    
+      
+      
+      @keyframes blinkbot{
+        0%{
+          opacity: 0;
+        }
+        40%{
+          opacity: 0;
+        }
+        50%{
+          opacity: 1;
+        }
+        90%{
+          opacity: 1;
+        }
+        100%{
+          opacity: 0;
+        }
+      }
+      
+      @keyframes infinityPath {
+          0% {
+              opacity: 1;
+            transform: translate(-50%, 0) rotate(0deg) scale(5); /* Начало анимации */
+            bottom: -100px;
+            left: 50%;
+          }
+          25% {
+              opacity: 1;
+            transform: translate(200px, -200px) rotate(180deg) scale(3); /* Четверть пути */
+            bottom: 50%;
+            left: 50%;
+          }
+          50% {
+              opacity: 1;
+            transform: translate(0, -100%) rotate(360deg) scale(2); /* Половина пути */
+            bottom: 100%;
+            left: 50%;
+          }
+          75% {
+              opacity: 1;
+            transform: translate(-200px, 200px) rotate(540deg)  scale(1); /* Три четверти пути */
+            bottom: 50%;
+            left: 50%;
+            opacity: 1;
+          }
+          100% {
+            transform: translate(0, 0) rotate(0deg)  scale(1) translateX(-50%); /* Завершающий цикл */
+            bottom: 0;
+            left: 50%;
+            opacity: 0.5;
+          }
+         
+        }
+      
+        @keyframes fade{
+          0%{
+            opacity: 0;
+          }
+          20%{
+            opacity: 1;
+          }
+          60%{
+            opacity: 1  ;
+          }
+          100%{
+            opacity: 0;
+          }
+        }
 
 @keyframes line{
     0%{
@@ -423,11 +616,36 @@ transition: all .3s ease;
 
 @media screen and (max-width:500px){
    
+    .bot{
+        position: absolute;
+        bottom: 1%;
+        right: 0;
+        width: 50px; 
+       
+&_sent{
+   width: 90vw;
+   left: calc(50% - 45vw);
+   height: 150px;
+   backdrop-filter: blur(5px); 
+   
+   &::after{
+    width: 90vw;
+   }
+}
+
+        &:after{
+           top: -50%;
+           left:70% ;
+        }
+        & img{
+            width: 60px;
+        }
+    }
  
 
    .starcode{
-     min-height: 90vh; 
-    
+     min-height: 90vh;
+     position: relative;
      &_heading{
         font-size: 2rem;
         &_design{
@@ -443,7 +661,7 @@ transition: all .3s ease;
         font-size: 0.6rem;
         height: 30px;
         width: 110px;
-     border-radius: 3px;
+         border-radius: 3px;
      }
 
 

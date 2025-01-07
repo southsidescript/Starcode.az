@@ -6,10 +6,13 @@ const Form = (props) => {
 
 const [user,setUser] = useState({});
     
-const {setForm,sendMessage,users,url} = props;
+const {setSent,setForm,sendMessage,users,url} = props;
 
-return(
-    <div   className={style.form}>
+
+
+
+return(<>
+   <div   className={style.form}>
            <div className={style.form_close} onClick={()=>{
             setForm(false);
            }}>
@@ -47,10 +50,20 @@ return(
                    ${user.message}
                  `
                  sendMessage(users,msg,url);
+                  setSent(true);
+                  let timeout = setTimeout(()=>{
+                    setSent(false);
+                      clearTimeout(timeout);
+
+                  },5000)
                  console.log('Start')
 
             }} >Отправить</button>
     </div>
+
+   
+</>
+  
 )
 
 }

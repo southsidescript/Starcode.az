@@ -1,8 +1,10 @@
 'use client'
 
+import style from '../../../styles/global.module.scss'
 import { useState } from 'react';
 import './Bot.scss'
 import Form from '../Form/Form';
+import Image from 'next/image';
 const Bot = () => {
      
     const [bot,setBot] = useState({
@@ -26,7 +28,11 @@ const Bot = () => {
     })
     const [clientInfo,setClientInfo] = useState('');
     
-    const [form,setForm] = useState(false)
+    const [sent,setSent] = useState(false);
+
+    const [form,setForm] = useState(false);
+
+    
      
     const sendRequest = () => {
         
@@ -62,15 +68,33 @@ const Bot = () => {
     
 
     return ( <>
-    <div className='bot' onClick={()=>{
+    <div className={style.bot} onClick={()=>{
         setForm(!form)
     }}  /*onClick={sendRequest}*/>
        
            <img src="./bot/bot-v1.png" alt="" />
         </div>
      
-     {form?  <Form setForm={setForm} users={bot.users} url={bot.request_url + bot.token + '/'+ bot.commands.msg} sendMessage={sendMessage}/>:''}
-      
+     {form?  <Form
+                 setSent={setSent}
+                 setForm={setForm}
+                 users={bot.users}
+                 url={bot.request_url + bot.token + '/'+ bot.commands.msg}
+                 sendMessage={sendMessage}
+                 />:''}
+
+{sent?   <div className={style.bot_sent}>
+          {/* <img src="./bot/bot-v2.png" alt="" /> */}
+          <h4>Ваше сообщение успешно отправлено </h4><Image 
+               src='/mark.png'
+               width={48}
+               height={48}
+               />
+           <p>Скоро с Вами свяжется наш менеджер!</p>    
+          
+    </div>:''}
+
+    
 
     </>
 

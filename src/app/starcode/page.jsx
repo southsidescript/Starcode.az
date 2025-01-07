@@ -33,10 +33,11 @@ const Starcode = () => {
            
 
             <button className={style.starcode_start}>Ilk addimini et</button>
+                 
+                  <Bot/>
         </div>
        
-        
-    <Bot/>
+   
 
 
       
