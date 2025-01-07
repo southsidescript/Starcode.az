@@ -1,25 +1,53 @@
 import style from '../../../styles/global.module.scss';
+import { useState } from 'react';
 
 
+const Form = (props) => {
 
-const Form = () => {
-
-
+const [user,setUser] = useState({});
+    
+const {setForm,sendMessage,users,url} = props;
 
 return(
     <div   className={style.form}>
-           
-          <input type="text" placeholder='Ваше имя' />
-          <input type="text" placeholder='+994 0xx - xxx - xx - xx' />
-          <input type="text"  placeholder='Электронная почта'/>
+           <div className={style.form_close} onClick={()=>{
+            setForm(false);
+           }}>
+            <img src="./close.png" alt="" />
+           </div>
+          <input type="text" placeholder='Ваше имя'  onBlur={(event)=>{
+            setUser({...user,name:event.target.value});
+          }}/>
+          <input type="text" placeholder='+994 0xx - xxx - xx - xx' onBlur={(event)=>{
+            setUser({...user,phone:event.target.value})
+         
+          }} />
+          <input type="text"  placeholder='Электронная почта' onBlur={(event)=>{setUser({...user,email:event.target.value})}}/>
           <p>Возраст студента</p>
-          <div className={style.form_age}><input type="text" placeholder='Г'/> <input type="text" placeholder='М'/> <input type="text" placeholder='Д'/>  </div> 
+          <div className={style.form_age}>
+            <input type="text" placeholder='Г' onBlur={ (event)=>{setUser({...user,age:event.target.value }) } } />
+            <input type="text" placeholder='М' onBlur={ (event)=>{setUser({...user,month:event.target.value }) } } />
+            <input type="text" placeholder='Д' onBlur={(event)=>{setUser({...user,day:event.target.value} ) }}/>  </div> 
+          
           <div className={style.form_design}>
              <div className={style.form_design_prog}></div>
           </div>
+
           <p>Сообщение</p>
-           <input type="text"  />
-          <button className={style.form_send}>Отправить</button>
+           <input type="text" onBlur={(event)=>{setUser({...user,message:event.target.value})}}  />
+            <button className={style.form_send} onClick={()=>{
+                 
+                 const msg = `У вас новый лид!
+                   Имя: ${user.name}\
+                   Телефон: ${user.phone}\
+                   Email: ${user.email}\
+                   Возраст: ${user.age}.${user.month}.${user.day}\
+                   Сообщение: ${user.message}
+                 `
+                 sendMessage(users,msg,url);
+                 console.log('Start')
+
+            }} >Отправить</button>
     </div>
 )
 

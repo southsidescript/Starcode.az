@@ -168,6 +168,7 @@
 }
 
 .form{
+    animation: blink 3s 1;
     width: 500px;
     height: 80vh;
     display: flex;
@@ -175,6 +176,20 @@
     align-items: center;
     position: relative;
   overflow: hidden;
+
+    
+  &_close{
+    position: absolute;
+    right: 7%;
+    top: 4%;
+    opacity: 0.5;
+transition: all .3s ease;
+    &:hover{
+        cursor: pointer;
+        opacity: 1;
+        
+    }
+  }
     &_design{
         height: 100%;
         width: 1px;
@@ -288,6 +303,16 @@
     100%{
         transform: translateY(800px);
         opacity: 0;
+    }
+}
+@keyframes blink{
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
     }
 }
 

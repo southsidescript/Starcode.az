@@ -11,23 +11,68 @@ cursor: pointer;
    opacity: 1;
    transform: translateY(-10px) translateX(-50%);
 }
-    & img{
+    
+& img{
         width: 100px;
   
     }
+   &:after{
+      content: 'Привет!Если возникли вопросы нажми на меня!';
+      text-align: center;
+      align-content: center;
+      color: black;
+      font-size: 12px;
+      width: 150px;
+      font-family: monospace;
+      height: 50px;
+      border-radius: 5px;
+      background-color: white;
+      position: absolute;
+      top: -40%;
+      left:60%;
+      animation: blink 10s 1 forwards;
+    }
 
 }
+
+
+
+
 
 @media screen and (max-width:500px){
   
     .bot{
         right: 0;
         width: 50px; 
-
+       
+        &:after{
+           top: -50%;
+           left:70% ;
+        }
         & img{
             width: 60px;
         }
     }
+}
+
+
+
+@keyframes blink{
+  0%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 
 @keyframes infinityPath {

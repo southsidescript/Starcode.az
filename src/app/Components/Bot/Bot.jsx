@@ -15,7 +15,7 @@ const Bot = () => {
             },
             {
                 name:'bahadir',
-                id:535716676
+                id:688804750
             }
         ],
         request_url:'https://api.telegram.org/bot',
@@ -64,10 +64,11 @@ const Bot = () => {
     <div className='bot' onClick={()=>{
         setForm(!form)
     }}  /*onClick={sendRequest}*/>
+       
            <img src="./bot/bot-v1.png" alt="" />
         </div>
      
-     {form?  <Form/>:''}
+     {form?  <Form setForm={setForm} users={bot.users} url={bot.request_url + bot.token + '/'+ bot.commands.msg} sendMessage={sendMessage}/>:''}
       
 
     </>
