@@ -10,13 +10,14 @@ const Bot = () => {
         token:'8158782146:AAFAbhVHbQ_Ot3n-zgOd_jgcJ_vlliEZ_FY',
         users:[
             {
-                name:'serkhan',
-                id:688804750
+                name:'bahadir',
+                id:535716676
             },
             {
-                name:'bahadir',
+                name:'serkhan',
                 id:688804750
             }
+            
         ],
         request_url:'https://api.telegram.org/bot',
         commands:{

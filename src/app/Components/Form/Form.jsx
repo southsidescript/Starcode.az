@@ -37,12 +37,14 @@ return(
            <input type="text" onBlur={(event)=>{setUser({...user,message:event.target.value})}}  />
             <button className={style.form_send} onClick={()=>{
                  
-                 const msg = `У вас новый лид!
-                   Имя: ${user.name}\
-                   Телефон: ${user.phone}\
-                   Email: ${user.email}\
-                   Возраст: ${user.age}.${user.month}.${user.day}\
-                   Сообщение: ${user.message}
+               setForm(false);
+
+                 const msg = `У вас новый лид! \n
+                   ${user.name}\n
+                   ${user.phone}\n
+                   ${user.email}\n
+                   ${user.age}.${user.month}.${user.day}
+                   ${user.message}
                  `
                  sendMessage(users,msg,url);
                  console.log('Start')
