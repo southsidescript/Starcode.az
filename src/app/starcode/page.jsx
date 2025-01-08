@@ -17,15 +17,16 @@ const Starcode = () => {
   return (
   <div className={style.starcode}>
 
-       <header>
-          <h1 className={style.starcode_heading}>
-                {sentence.map((w,s) => <span key={s} >{w}</span>  ) } 
-          </h1>
-
-         
-       </header>
+    
      
         <div className={style.starcode_main}>
+
+        <div>
+            <h1 className={style.starcode_heading}>
+                  {sentence.map((w,s) => <span key={s} >{w}</span>  ) } 
+            </h1>
+         </div>
+
             <div className={style.starcode_title}>
                   Texnologiyalar dünyasını kəşf et — gələcəyini təmin et
             </div>
@@ -36,6 +37,15 @@ const Starcode = () => {
                  
                   <Bot/>
         </div>
+
+        <section className={style.starcode_about}>
+
+            
+
+
+
+
+        </section>
        
    
 

@@ -85,24 +85,19 @@
 
 
 .starcode{
-    position: relative !important;
+
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
     align-items: center;
     min-height: 100vh;
-
-  
-  &::after{
-    position: absolute;
-    backdrop-filter: blur(75px);
-    z-index: -2;
-    content: "";
-    width: 100vw;
+   
+  &_about{
     height: 100vh;
-  }
 
-   animation: blur 3s 1 linear;
+  }   
+
+   
 //    background-image: linear-gradient(150deg,rgba(78, 0, 180, 0.315),rgb(0, 0, 0));
     // backdrop-filter: blur(75px);
    & header{
@@ -126,16 +121,16 @@
         margin: 20px 0px;
         text-align: center;
         align-content: center;
-        font-size: 5rem;
+        font-size: 8rem;
         color: transparent;
         font-family: Arial;
         letter-spacing: 2px;
         background-clip: text;
-        background-image:linear-gradient(120deg,rgb(171, 253, 235),white,rgb(255, 248, 255)) ;
-      
+        background-image:linear-gradient(120deg,rgb(162, 252, 232),white,rgb(250, 216, 250)) ;
+        animation: fade 4s 1; 
 
         &_design{
-            width: 75px;
+            width: 85px;
             margin-top: 20%;
             animation: rotating 15s infinite linear;
             opacity: .9;
@@ -143,15 +138,29 @@
     }
 
     &_main{
-      
+   
+        z-index: 0;
         width: 100%;
-        height: 50vh;
+        min-height:  100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20px;
         flex-direction: column;
+        background-image: radial-gradient(ellipse 200px 600px at top ,rgba(0, 0, 255, 0.932),transparent),
+        radial-gradient(ellipse 250px 250px at 50% 60% ,rgb(0, 0, 255),black,transparent );
+          
+        &::after{
+          position: absolute;
+          backdrop-filter: blur(55px);
+          z-index: -1;
 
+          content: "";
+          width: 100vw;
+          height: 100vh;
+        }
+
+        
     }
 
     &_title{
@@ -326,7 +335,7 @@ transition: all .3s ease;
       justify-content: space-evenly;
       flex-direction: column;
       align-items: center;
-      animation: fade 5s 1;
+      animation: fadeout 5s 1;
       color: white;
       text-transform: uppercase;
      
@@ -470,6 +479,20 @@ transition: all .3s ease;
         }
       
         @keyframes fade{
+          0%{
+            transform: scale(1.2);
+            opacity: 0;
+          }
+      50%{
+        transform: scale(1);
+      }
+          100%{
+           
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeout{
           0%{
             opacity: 0;
           }
@@ -643,17 +666,37 @@ transition: all .3s ease;
     }
  
 
+   
+
    .starcode{
-     min-height: 90vh;
-     position: relative;
+      
+   .bot{
+    position: absolute;
+   }
+
+   .form{
+    width: 100vw;
+    left: calc(50% - 48vw);
+   }
+   
+
+    &_main{
+      min-height: 90vh;
+      background-image: radial-gradient(ellipse 100px 600px at top ,rgba(0, 0, 255, 0.932),transparent),
+      radial-gradient(ellipse 200px 200px at 50% 60% ,rgb(0, 0, 255),black,transparent );
+    }
+
      &_heading{
-        font-size: 2rem;
+       
+        font-size: 4rem;
         &_design{
-            width: 30px;
+            width: 50px;
         } 
     }
 
      &_title{
+        width: 220px;
+        text-align: center;
         font-size: 0.7rem;
      }
 
