@@ -43,22 +43,46 @@ const Starcode = () => {
         </div>
 
         <section className={styles.starcode_about}>
+   
+         <div className={styles.starcode_about_head}>
 
-             <h2> Proqramlaşdırma modulları</h2> 
+         <h2> Proqramlaşdırma modulları</h2> 
 
-              <div className={styles.starcode_about_box}>
-                       <span style={{'--i': 1}}><img src="./icons/html.png" alt="" />   </span>
-                       <span style={{'--i': 2}}><img src="./icons/css.png" alt="" />   </span>
-                       <span style={{'--i': 3}}><img src="./icons/javascript.png" alt="" />   </span>
-                       <span style={{'--i': 4}}><img src="./icons/github.png" alt="" />   </span>
-                       <span style={{'--i': 5}}><img src="./react.png" alt="" />   </span>
-                       <span style={{'--i': 6}}><img src="./icons/sass.png" alt="" />   </span>
-                       <span style={{'--i': 7}}><img src="./icons/html.png" alt="" />   </span>
-                       <span style={{'--i': 8}}><img src="./icons/html.png" alt="" />   </span>
+             <div className={styles.starcode_about_box}>
+         <span style={{'--i': 1}}><img src="./icons/html.png" alt="" />   </span>
+         <span style={{'--i': 2}}><img src="./icons/css.png" alt="" />   </span>
+         <span style={{'--i': 3}}><img src="./icons/javascript.png" alt="" />   </span>
+         <span style={{'--i': 4}}><img src="./icons/github.png" alt="" />   </span>
+         <span style={{'--i': 5}}><img src="./react.png" alt="" />   </span>
+         <span style={{'--i': 6}}><img src="./icons/sass.png" alt="" />   </span>
+         <span style={{'--i': 7}}><img src="./icons/obsidian-icon.png" alt="" />   </span>
+         <span style={{'--i': 8}}><img src="./icons/gpt.png" alt="" />   </span>
+    
+    
+               </div> 
+ 
+         </div>
+            
+     
+          <diV className={styles.starcode_about_modules}>
+               
+                <div className={styles.starcode_about_modules_card}>
+                     <h3>Beginner modulu</h3>
+                     <p>HTML5     1 ay  </p>
+                     <p>CSS3      1 ay</p>
+                     <p>JavaScript 1 ay  </p>
+
+                   
+                  </div>
                   
+                  <div className={styles.starcode_about_modules_card}>
                   
-                  </div> 
+                  </div>
 
+                  <div className={styles.starcode_about_modules_card}>
+                  
+                  </div>
+          </diV>
 
 
 

@@ -91,10 +91,40 @@
     justify-content:flex-start;
     align-items: center;
     min-height: 100vh;
+
    
   &_about{
-    height: 100vh;
+    min-height: 100vh;
     
+    &_modules{
+      flex-wrap: wrap;
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;    
+      &_card{
+        font-family: 'Roboto Mono';
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        box-shadow: 0px 0px 5px blue;
+        width: 350px;
+        height: 500px;
+        background-color: white;
+        border-radius: 15px;
+        color: black;
+      }
+    }
+
+    &_head{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     & h2{
       
       font-size:34px;
@@ -110,7 +140,7 @@
 
     &_box{
       &:hover{
-    animation-play-state: paused;
+         animation-play-state: paused;
        }   
       width: 200px;
       height: 200px;
@@ -118,7 +148,7 @@
       position: relative;
       animation: carousel 20s linear infinite;
 
-        
+  
 
   & span{
     position: absolute;
@@ -131,9 +161,9 @@
     transform: rotateY(calc(var(--i) *45deg)) translateZ(400px);
  
     border-radius: 18px;
-    
-    box-shadow: 0px 0px 3px white;
-    backdrop-filter: blur(10px); 
+
+    // box-shadow: 0px 0px 3px white;
+    // backdrop-filter: blur(10px); 
  
     & img{
 
@@ -378,7 +408,7 @@ transition: all .3s ease;
 
 
 .bot{
-    position: fixed;
+    // position: fixed;
     bottom: 0px; 
     left: 50%;
     transform: translateX(-50%);
@@ -723,6 +753,7 @@ transition: all .3s ease;
    backdrop-filter: blur(5px); 
    
    &::after{
+
     width: 90vw;
    }
 }
@@ -742,7 +773,7 @@ transition: all .3s ease;
    .starcode{
       
    .bot{
-    position: absolute;
+    position: fixed;
    }
 
    .form{
@@ -759,7 +790,8 @@ transition: all .3s ease;
         width: 200px;
         text-align: center;
        }
-          &_box{
+       
+      &_box{
             width: 100px;
             height: 100px;
             
@@ -777,6 +809,18 @@ transition: all .3s ease;
               }
             }
           }
+      
+      &_modules{
+        margin-top: 100px;
+         gap: 100px; 
+        &_card{
+
+
+         }
+      }
+
+
+
 
      }
 
@@ -784,6 +828,17 @@ transition: all .3s ease;
       min-height: 90vh;
       background-image: radial-gradient(ellipse 100px 600px at top ,rgba(0, 0, 255, 0.932),transparent),
       radial-gradient(ellipse 200px 200px at 50% 60% ,rgb(0, 0, 255),black,transparent );
+      position: relative;
+      
+
+        &::after{
+        position: absolute;
+        top: 0;
+        height:800px;
+         }
+
+  
+
     }
 
      &_heading{
