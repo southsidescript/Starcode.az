@@ -66,21 +66,36 @@ const Starcode = () => {
      
           <diV className={styles.starcode_about_modules}>
                
-                <div className={styles.starcode_about_modules_card}>
-                     <h3>Beginner modulu</h3>
-                     <p>HTML5     1 ay  </p>
-                     <p>CSS3      1 ay</p>
-                     <p>JavaScript 1 ay  </p>
-
-                   
+                  <div className={styles.starcode_about_modules_card}>
+                        <h3>Pulsuz</h3>
+                        <p className={styles.starcode_about_modules_card_about}> Tanışlıq üçün ilk sınaq dərsi</p>
+                        <p className={styles.starcode_about_modules_card_price}> 0 ₼</p>
+                        <button className={styles.starcode_about_modules_card_btn}> Başla </button>
                   </div>
                   
-                  <div className={styles.starcode_about_modules_card}>
-                  
+                  <div id="popular" className={styles.starcode_about_modules_card}>
+                        <h3>Beginner</h3>
+                        <p className={styles.starcode_about_modules_card_about}> 12-16 yaşlı uşaqlar üçün.Təlim müddəti:12 ay.</p>
+                        <p className={styles.starcode_about_modules_card_price}> 150 ₼</p>
+                        <button className={styles.starcode_about_modules_card_btn}> Başla </button>
                   </div>
 
                   <div className={styles.starcode_about_modules_card}>
-                  
+                  <h3>Pro</h3>
+                        <p className={styles.starcode_about_modules_card_about}> 17 - 35 yaşlı şəxslər üçün. Təlim müddəti 18 aydır.</p>
+                        <p className={styles.starcode_about_modules_card_price}> 180 ₼</p>
+                        <button className={styles.starcode_about_modules_card_btn}> Başla </button>
+                  </div>
+
+                  <div className={styles.starcode_about_modules_card}>
+                  <h3>Personal modul</h3>
+                        <p className={styles.starcode_about_modules_card_about}>
+                              Bütün yaşlar üçün fərdi təlim.
+                              Dərslər 1-ə 1 rejimində keçirilir.
+                              Təlimin müddəti: 12 aydır
+</p>
+                        <p className={styles.starcode_about_modules_card_price}> 180 ₼</p>
+                        <button className={styles.starcode_about_modules_card_btn}> Başla </button>
                   </div>
           </diV>
 

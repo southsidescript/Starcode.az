@@ -5,6 +5,7 @@ import style from '../../../styles/global.module.scss';
 import { useRef, useState } from 'react';
 import Bubble from '../Bubble/Bubble';
 import { useRouter } from 'next/navigation';
+
 const Eduside= (props) => {
   
 const [selected,setSelected] = useState(false);
