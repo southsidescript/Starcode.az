@@ -109,13 +109,17 @@
     }
 
     &_box{
+      &:hover{
+    animation-play-state: paused;
+       }   
       width: 200px;
       height: 200px;
       transform-style:preserve-3d ;
       position: relative;
       animation: carousel 20s linear infinite;
 
-       
+        
+
   & span{
     position: absolute;
     top: 0;
