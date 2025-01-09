@@ -287,7 +287,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    position: fixed;
   overflow: hidden;
   
 
@@ -777,6 +777,7 @@ transition: all .3s ease;
    }
 
    .form{
+    position: fixed;
     width: 100vw;
     left: calc(50% - 48vw);
    }
