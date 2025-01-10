@@ -65,7 +65,9 @@ const Starcode = () => {
             
      
           <diV className={styles.starcode_about_modules}>
-               
+                 
+        
+
                   <div className={styles.starcode_about_modules_card}>
                         <h3>Pulsuz</h3>
                         <p className={styles.starcode_about_modules_card_about}> Tanışlıq üçün ilk sınaq dərsi</p>
