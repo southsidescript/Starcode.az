@@ -96,7 +96,7 @@ const Starcode = () => {
                               Dərslər 1-ə 1 rejimində keçirilir.
                               Təlimin müddəti: 12 aydır
 </p>
-                        <p className={styles.starcode_about_modules_card_price}> 180 ₼</p>
+                        <p className={styles.starcode_about_modules_card_price}> 500 ₼</p>
                         <button className={styles.starcode_about_modules_card_btn}> Başla </button>
                   </div>
           </diV>
