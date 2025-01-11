@@ -46,7 +46,7 @@ const Starcode = () => {
    
          <div className={styles.starcode_about_head}>
 
-         <h2> Proqramlaşdırma modulları</h2> 
+         <div className={styles.starcode_about_head_heading}> Proqramlaşdırma modulları</div> 
 
              <div className={styles.starcode_about_box}>
          <span style={{'--i': 1}}><img src="./icons/html.png" alt="" />   </span>
@@ -82,10 +82,10 @@ const Starcode = () => {
                         <button className={styles.starcode_about_modules_card_btn}> Başla </button>
                   </div>
 
-                  <div className={styles.starcode_about_modules_card}>
+                  <div id="hot" className={styles.starcode_about_modules_card}>
                   <h3>Pro</h3>
                         <p className={styles.starcode_about_modules_card_about}> 17 - 35 yaşlı şəxslər üçün. Təlim müddəti 18 aydır.</p>
-                        <p className={styles.starcode_about_modules_card_price}> 180 ₼</p>
+                        <p className={styles.starcode_about_modules_card_price}> 180 ₼ <sup><del>200 ₼</del></sup></p>
                         <button className={styles.starcode_about_modules_card_btn}> Başla </button>
                   </div>
 
@@ -96,7 +96,7 @@ const Starcode = () => {
                               Dərslər 1-ə 1 rejimində keçirilir.
                               Təlimin müddəti: 12 aydır
 </p>
-                        <p className={styles.starcode_about_modules_card_price}> 500 ₼</p>
+                        <p className={styles.starcode_about_modules_card_price}> 600 ₼</p>
                         <button className={styles.starcode_about_modules_card_btn}> Başla </button>
                   </div>
           </diV>

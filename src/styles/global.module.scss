@@ -116,7 +116,7 @@
   box-shadow: 0px 0px 5px 2px blue;
   height: 1px;
   background: blue;
-  animation: linetoout 5s infinite;
+  animation: linetoout 2s infinite;
 
 }
 
@@ -136,6 +136,10 @@
         }
         &_price{
           font-size: 2.5rem;
+
+          & sup{
+            font-size: 14px;
+          }
         }
 
         &_btn{
@@ -180,20 +184,23 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-
-    & h2{
-      
-      font-size:34px;
-      font-family: Arial;
-      letter-spacing: 3px;
-      position: relative; 
-  
+      justify-content: space-between;
+      height: 40vh;
+      background-image: radial-gradient(ellipse 20% 20% at 50% 10%,rgba(255, 255, 255, 0.281),black);
+      &_heading{
+        font-size:34px;
+        position: relative; 
+        font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+     
    
- 
-
-
+  
+  
+      }
     }
+
+   
 
     &_box{
       &:hover{
@@ -460,6 +467,7 @@ transition: all .3s ease;
 
 .bot{
     position: fixed;
+    z-index: 1000 !important;
     bottom: 0px; 
     left: 50%;
     transform: translateX(-50%);
@@ -816,6 +824,7 @@ transition: all .3s ease;
 @media screen and (max-width:500px){
    
     .bot{
+      z-index: 1000 !important;
         position: absolute;
         bottom: 1%;
         right: 0;
@@ -849,6 +858,8 @@ transition: all .3s ease;
       
    .bot{
     position: fixed;
+    z-index: 1001 !important;
+
    }
 
    .form{
@@ -861,13 +872,17 @@ transition: all .3s ease;
 
      &_about{
         
-
-      & h2{
-        font-size: 20px ;
-        width: 200px;
-        text-align: center;
-       }
-       
+  &_head{
+    height: 25vh;
+ 
+    &_heading{
+      font-size: 25px ;
+      width: 200px;
+      text-align: center;
+     }
+     
+  }
+   
       &_box{
             width: 100px;
             height: 100px;
