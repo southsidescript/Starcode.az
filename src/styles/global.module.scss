@@ -8,6 +8,10 @@
 .edumode::-webkit-scrollbar{
     display: none;
 }
+
+
+
+
 .eduside{
     display: flex;
     align-items: center;
@@ -20,8 +24,8 @@
     position: relative;
 
     transition: all .5s ease;
-    color: white; 
-     
+    color: white;
+
     &_active{
         display: flex;
         align-items: center;
@@ -31,12 +35,12 @@
         overflow: hidden;
         font-family: 'Orbitron','sans-serif';
         letter-spacing: 2px;
-        color: white; 
+        color: white;
         position: fixed;
         transition: all .3s ease;
-        animation: choise 3s 1 forwards;      
-        z-index: 1000; 
-        
+        animation: choise 3s 1 forwards;
+        z-index: 1000;
+
     }
 
     &_desc{
@@ -53,7 +57,7 @@
 
   .eduside:hover{
   font-size: 110%;
-    
+
   }
 
 
@@ -80,31 +84,32 @@
     bottom: 0;
     left: 50%;
     z-index:0;
-    
+
 }
 
 
 .starcode{
-
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
     align-items: center;
     min-height: 100vh;
 
-   
+
   &_about{
     min-height: 100vh;
-    
+    display: flex;
+    margin-bottom: 100px;
+
     &_modules{
       position: relative;
-      flex-wrap: wrap;
+
       width: 100vw;
       margin-top: 200px;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
-      justify-content: space-evenly;    
+      justify-content: space-evenly;
 &::after{
   content: "";
   position: absolute;
@@ -122,7 +127,7 @@
 
       &_card{
        position: relative;
-        
+
         transition: all .3s ease;
          &:hover{
           cursor: pointer;
@@ -152,7 +157,7 @@
           color: white;
           font-size: 15px;
           transition: all .5s ease;
-      
+
 
           &:hover{
             cursor: pointer;
@@ -163,7 +168,7 @@
         & h3{
           font-size: 32px;
         }
-        
+
         font-family: 'Arial';
         padding: 20px;
         display: flex;
@@ -172,7 +177,7 @@
         align-items: center;
         width: 320px;
         height: 400px;
-       border-top: 2px solid rgba(255, 255, 255, 0.137); 
+       border-top: 2px solid rgba(255, 255, 255, 0.137);
         border-radius: 10%;
         background-image: linear-gradient(180deg,rgb(14, 14, 14),rgba(0, 0, 0, 0.199));
         color: white;
@@ -189,30 +194,30 @@
       background-image: radial-gradient(ellipse 20% 20% at 50% 10%,rgba(255, 255, 255, 0.281),black);
       &_heading{
         font-size:34px;
-        position: relative; 
+        position: relative;
         font-family: "Poppins", serif;
   font-weight: 500;
   font-style: normal;
-     
-   
-  
-  
+
+
+
+
       }
     }
 
-   
+
 
     &_box{
       &:hover{
          animation-play-state: paused;
-       }   
+       }
       width: 200px;
       height: 200px;
       transform-style:preserve-3d ;
       position: relative;
       animation: carousel 20s linear infinite;
 
-  
+
 
   & span{
     position: absolute;
@@ -223,12 +228,12 @@
     transform-origin: center;
     transform-style: preserve-3d;
     transform: rotateY(calc(var(--i) *45deg)) translateZ(400px);
- 
+
     border-radius: 18px;
 
     // box-shadow: 0px 0px 3px white;
-    // backdrop-filter: blur(10px); 
- 
+    // backdrop-filter: blur(10px);
+
     & img{
 
       position: absolute;
@@ -236,11 +241,11 @@
       height: 60%;
       top: 25%;
       left: 25%;
- 
-      
-      
-      
-      
+
+
+
+
+
     }
   }
 
@@ -250,9 +255,72 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-  }   
+  }
 
-   
+  &_info{
+
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+
+
+    &_head{
+      text-align: center;
+      font-family: serif;
+      font-family: "Poppins", serif;
+      font-size: 20px;
+    }
+
+    &_cardcontainer{
+
+      min-height: 50vh ;
+      gap: 10%;
+      justify-content: space-between;
+      align-items: center;
+      width: 20vw;
+      flex-wrap: wrap;
+      display: flex;
+    }
+    &_card{
+
+
+
+      &_icon{
+        animation: conic 10s infinite linear;
+        text-align: center;
+        align-content: center;
+        font-family: Poppins;
+        width: 75px;
+        height: 75px;
+        border-radius: 10px;
+         border: 1px solid #00003f;
+        position: relative;
+        //background: black;
+        background: black;
+        &::after{
+          content: '';
+          width: 1px;
+          height: 30px;
+          background: blue;
+          position: absolute;
+          bottom: 0;
+          left: calc(50%);
+          border-radius: 50%;
+          z-index: -1;
+          box-shadow: 0px 0px 3px 1px blue;
+          animation: lineforinfo 2s infinite;
+        }
+
+
+      }
+    }
+
+
+
+  }
+
 //    background-image: linear-gradient(150deg,rgba(78, 0, 180, 0.315),rgb(0, 0, 0));
     // backdrop-filter: blur(75px);
    & header{
@@ -269,7 +337,7 @@
 
 
     &_heading{
-        
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -282,7 +350,7 @@
         letter-spacing: 2px;
         background-clip: text;
         background-image:linear-gradient(120deg,rgb(162, 252, 232),white,rgb(250, 216, 250)) ;
-        animation: fade 4s 1; 
+        animation: fade 4s 1;
 
         &_design{
             width: 85px;
@@ -293,7 +361,7 @@
     }
 
     &_main{
-   
+
         z-index: 0;
         width: 100%;
         min-height:  100vh;
@@ -304,7 +372,7 @@
         flex-direction: column;
         background-image: radial-gradient(ellipse 200px 600px at top ,rgba(0, 0, 255, 0.932),transparent),
         radial-gradient(ellipse 250px 250px at 50% 60% ,rgb(0, 0, 255),black,transparent );
-          
+
         &::after{
           position: absolute;
           backdrop-filter: blur(55px);
@@ -315,7 +383,7 @@
           height: 100vh;
         }
 
-        
+
     }
 
     &_title{
@@ -334,7 +402,7 @@
         transition: all .2s ease;
         border: none;
         color: white;
-    
+
         &:hover{
               box-shadow: 0px 0px 5px rgb(0, 255, 255);
            cursor: pointer;
@@ -351,9 +419,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+
     overflow: hidden;
-  
+
     background: black;
     justify-content: center;
     gap: 30px;
@@ -364,7 +432,7 @@
 
     z-index: 1001 !important;
 
-    
+
   &_close{
     position: absolute;
     right: 7%;
@@ -374,7 +442,7 @@ transition: all .3s ease;
     &:hover{
         cursor: pointer;
         opacity: 1;
-        
+
     }
   }
     &_design{
@@ -384,7 +452,7 @@ transition: all .3s ease;
         left: 49%;
         background-color: rgba(17, 0, 255, 0.192);
         z-index: -2;
-   
+
         &_prog{
             position: absolute;
             top: 0;
@@ -395,10 +463,10 @@ transition: all .3s ease;
              height: 10%;
             z-index: -1;
              box-shadow: 0px 0px 15px 3px blue;
-          
+
         }
     }
- 
+
     &_send{
         width: 32%;
         height: 45px;
@@ -415,15 +483,15 @@ transition: all .3s ease;
             cursor: pointer;
             background-color: white;
             color: black;
-           
+
         }
     }
-    
+
     & p{
         font-size: 12px;
         text-transform: uppercase;
     }
-    
+
     & input[type="text"]{
         width: 50%;
         height: 50px;
@@ -440,17 +508,17 @@ transition: all .3s ease;
             font-size: 11px;
             letter-spacing: 1px;
 
-         
-            
+
+
          }
         &:focus{
           box-shadow: 0px 0px 5px rgb(0, 0, 255);
         }
-        
+
     }
-    
+
     &_age{
-       
+
         width: 100%;
         display: flex;
         justify-content: center;
@@ -468,7 +536,7 @@ transition: all .3s ease;
 .bot{
     position: fixed;
     z-index: 1000 !important;
-    bottom: 0px; 
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     animation: infinityPath 3s ease-in-out;
@@ -479,7 +547,7 @@ transition: all .3s ease;
        opacity: 1;
        transform: translateY(-10px) translateX(-50%);
     }
-    
+
     &_sent{
       display: flex;
       justify-content: space-evenly;
@@ -488,7 +556,7 @@ transition: all .3s ease;
       animation: fadeout 5s 1;
       color: white;
       text-transform: uppercase;
-     
+
 
       font-size: 10px;
       text-align: center;
@@ -504,8 +572,8 @@ transition: all .3s ease;
        box-shadow: 0px 0px 5px rgb(0, 0, 102);
        border-radius: 15px;
        overflow: hidden;
-    
-     
+
+
        &::after{
         animation: linetoright 5s infinite;
         content: '';
@@ -517,7 +585,7 @@ transition: all .3s ease;
         top: 0;
         left:0;
        }
-    
+
        &::before{
         animation: linetoleft 5s infinite;
         content: '';
@@ -530,10 +598,10 @@ transition: all .3s ease;
         right:0;
        }
     }
-        
+
     & img{
             width: 100px;
-      
+
         }
        &:after{
           content: 'Привет!Если возникли вопросы нажми на меня!';
@@ -551,11 +619,34 @@ transition: all .3s ease;
           left:60%;
           animation: blinkbot 10s 1 forwards;
         }
-    
+
     }
 
+@keyframes aboutcard{
+  0% {
+    box-shadow: 0 2px 25px rgba(255, 0, 0, 0.7),
+    0 -2px 25px rgba(0, 3, 248, 0.7); /* Красная тень */
+  }
+  25% {
+    box-shadow: 2 0px 35px rgba(255, 0, 0, 0.7),
+    -2px 0px 25px rgba(0, 3, 248, 0.7); /* Красная тень */
+  }
+  50% {
+    box-shadow: 0 -2px 25px rgba(255, 0, 0, 0.7),
+    0 2px 25px rgba(0, 3, 248, 0.7); /* Красная тень */
+  }
+  75% {
+    box-shadow: -2px 0 35px rgba(255, 0, 0, 0.7),
+    2 0 25px rgba(0, 3, 248, 0.7); /* Красная тень */
+  }
+  100% {
+    box-shadow: 0 2px 25px rgba(255, 0, 0, 0.7),
+    0 -2px 25px rgba(0, 3, 248, 0.7); /* Красная тень */
+  }
 
-    @keyframes carousel{
+}
+
+@keyframes carousel{
       0%{
         transform: perspective(1000px) rotateY(0deg);
       }
@@ -564,7 +655,7 @@ transition: all .3s ease;
       }
     }
 
-    @keyframes linetoleft{
+@keyframes linetoleft{
         0%{
           transform: translateX(300px);
         }
@@ -572,8 +663,8 @@ transition: all .3s ease;
           transform: translateX(-35vw);
         }
       }
-      
-      @keyframes linetoright{
+
+@keyframes linetoright{
         0%{
           transform: translateX(-300px);
         }
@@ -581,11 +672,8 @@ transition: all .3s ease;
           transform: translateX(35vw);
         }
       }
-      
-    
-      
-      
-      @keyframes blinkbot{
+
+@keyframes blinkbot{
         0%{
           opacity: 0;
         }
@@ -602,8 +690,23 @@ transition: all .3s ease;
           opacity: 0;
         }
       }
-      
-      @keyframes infinityPath {
+
+
+@keyframes lineforinfo{
+  0%{
+    transform: translateY(0);
+    opacity: 0;
+
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(25vh);
+    opacity: 0;
+  }
+}
+@keyframes infinityPath {
           0% {
               opacity: 1;
             transform: translate(-50%, 0) rotate(0deg) scale(5); /* Начало анимации */
@@ -635,10 +738,10 @@ transition: all .3s ease;
             left: 50%;
             opacity: 0.5;
           }
-         
+
         }
-      
-        @keyframes fade{
+
+@keyframes fade{
           0%{
             transform: scale(1.2);
             opacity: 0;
@@ -647,12 +750,12 @@ transition: all .3s ease;
         transform: scale(1);
       }
           100%{
-           
+
             opacity: 1;
           }
         }
 
-        @keyframes fadeout{
+@keyframes fadeout{
           0%{
             opacity: 0;
           }
@@ -671,7 +774,7 @@ transition: all .3s ease;
     0%{
       transform: translateY(-50px);
     }
-    
+
     70%{
         transform: translateY(700px);
         opacity: 1;
@@ -681,6 +784,7 @@ transition: all .3s ease;
         opacity: 0;
     }
 }
+
 @keyframes blink{
     0%{
         transform: translateY(-50px);
@@ -706,7 +810,7 @@ transition: all .3s ease;
     transform: translateY(0);
     opacity: 1;
  }
-50%{ 
+50%{
     transform: translateY(-50vh);
 }
  100%{
@@ -717,9 +821,8 @@ transition: all .3s ease;
 
 }
 
-
 @keyframes slowUp{
-    0%{    
+    0%{
         opacity: 1;
         width: 2px;
         height: 40vh;
@@ -740,7 +843,7 @@ transition: all .3s ease;
     0%{
         width: 50vw;
         background-color: black;
-      
+
         }
         30%{
             width: 100vw;
@@ -755,9 +858,9 @@ transition: all .3s ease;
         position: fixed;
         left: 0;
         top: 0;
-     
+
     }
-   
+
     70%{
         color: white;
         font-size: 20px;
@@ -768,13 +871,13 @@ transition: all .3s ease;
         position: fixed;
         left: 0;
         top: 0;
-    
+
        font-size: 30rem;
         color: black;
-        
+
     }
-    
-    
+
+
 }
 
 @keyframes blur{
@@ -787,8 +890,8 @@ transition: all .3s ease;
     70%{
         backdrop-filter: blur(150px);
     }
-   
-  
+
+
     90%{
         backdrop-filter: blur(5px);
     }
@@ -815,27 +918,53 @@ transition: all .3s ease;
     opacity: 1;
   }
   100%{
-    transform: translateY(300vh);
+    transform: translateY(160vh);
+    opacity: 0;
   }
 }
 
 
+@keyframes conic{
+  0%{
+ box-shadow: 0px 2px 15px blue,
+      0px -2px 15px red;
+  }
+  25%{
+    box-shadow: 2px 0px 25px blue,
+    -2px 0px 25px white;
+   }
 
-@media screen and (max-width:500px){
-   
+  50%{
+    box-shadow: 0px -2px 15px blue,
+    0px 2px 15px white;
+  }
+
+  75%{
+    box-shadow: 0px 2px 15px blue,
+    0px -2px 15px white;
+  }
+  100%{
+    box-shadow: 0px 2px 25px blue,
+    0px -2px 25px red;
+  }
+}
+
+
+@media screen and (max-width:600px){
+
     .bot{
       z-index: 1000 !important;
         position: absolute;
         bottom: 1%;
         right: 0;
-        width: 50px; 
-       
+        width: 50px;
+
 &_sent{
    width: 90vw;
    left: calc(50% - 45vw);
    height: 150px;
-   backdrop-filter: blur(5px); 
-   
+   backdrop-filter: blur(5px);
+
    &::after{
 
     width: 90vw;
@@ -850,17 +979,19 @@ transition: all .3s ease;
             width: 60px;
         }
     }
- 
 
-   
+
+
 
    .starcode{
-      
+
    .bot{
     position: fixed;
     z-index: 1001 !important;
 
    }
+
+
 
    .form{
     position: fixed;
@@ -868,25 +999,27 @@ transition: all .3s ease;
     top: 0;
     left: calc(50% - 48vw);
    }
-    
+
 
      &_about{
-        
+
+
+
   &_head{
     height: 25vh;
- 
+
     &_heading{
       font-size: 25px ;
       width: 200px;
       text-align: center;
      }
-     
+
   }
-   
+
       &_box{
             width: 100px;
             height: 100px;
-            
+
 
 
             & span{
@@ -901,11 +1034,13 @@ transition: all .3s ease;
               }
             }
           }
-      
+
       &_modules{
         margin-top: 100px;
-         gap: 100px; 
-       
+        margin-bottom: 100px;
+         gap: 100px;
+        flex-direction: column;
+
         &::after{
           content: "";
           position: absolute;
@@ -918,9 +1053,9 @@ transition: all .3s ease;
           width: 1px;
           background: blue;
           animation: linetobottom 2s infinite;
-        } 
+        }
 
-        
+
       }
 
 
@@ -928,12 +1063,24 @@ transition: all .3s ease;
 
      }
 
+  &_info{
+
+    &_cardcontainer{
+      margin-top: 10vh;
+      width: 100vw;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 7vh;
+      min-height: 300vh;
+    }
+  }
+
     &_main{
       min-height: 90vh;
       background-image: radial-gradient(ellipse 100px 600px at top ,rgba(0, 0, 255, 0.932),transparent),
       radial-gradient(ellipse 200px 200px at 50% 60% ,rgb(0, 0, 255),black,transparent );
       position: relative;
-      
+
 
         &::after{
         position: absolute;
@@ -941,16 +1088,16 @@ transition: all .3s ease;
         height:800px;
          }
 
-  
+
 
     }
 
      &_heading{
-       
+
         font-size: 4rem;
         &_design{
             width: 50px;
-        } 
+        }
     }
 
      &_title{
@@ -967,8 +1114,8 @@ transition: all .3s ease;
      }
 
 
-     
-   }   
+
+   }
 
 
 }
