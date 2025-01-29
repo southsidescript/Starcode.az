@@ -9,6 +9,8 @@ import Main from '../Components/Main/Main'
 import About from '../Components/About/About'
 import Info from '../Components/Info/Info'
 
+
+
 const Starcode = () => {
 
     
@@ -21,8 +23,11 @@ const Starcode = () => {
 
 
            <Main/>
+          
+           <Bot/>
            <About/>
            <Info/>
+           
 
 
 

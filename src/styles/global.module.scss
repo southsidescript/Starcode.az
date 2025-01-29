@@ -97,6 +97,7 @@
 
 
   &_about{
+   
     min-height: 100vh;
     display: flex;
     margin-bottom: 100px;
@@ -191,7 +192,7 @@
       align-items: center;
       justify-content: space-between;
       height: 40vh;
-      background-image: radial-gradient(ellipse 20% 20% at 50% 10%,rgba(255, 255, 255, 0.281),black);
+   
       &_heading{
         font-size:34px;
         position: relative;
@@ -259,62 +260,85 @@
 
   &_info{
 
-
+    position: relative;
     min-height: 100vh;
+    width: 100vw;
     display: flex;
+    align-items: center;
     flex-direction: column;
 
 
 
     &_head{
-      text-align: center;
+      text-align: left;
       font-family: serif;
       font-family: "Poppins", serif;
-      font-size: 20px;
+      font-size: 2rem;
     }
 
     &_cardcontainer{
 
-      min-height: 50vh ;
-      gap: 10%;
-      justify-content: space-between;
-      align-items: center;
-      width: 20vw;
-      flex-wrap: wrap;
       display: flex;
+    padding-top: 5%;
+      justify-content: space-around;
+      align-items: center;
+     min-height: 100vh;
+      width: 70vw;
+      gap: 3%;
+      flex-wrap: wrap;
+      
+
     }
     &_card{
 
-
+    
 
       &_icon{
-        animation: conic 10s infinite linear;
+      
         text-align: center;
         align-content: center;
         font-family: Poppins;
-        width: 75px;
-        height: 75px;
+        width: 250px;
+        height: 250px;
         border-radius: 10px;
-         border: 1px solid #00003f;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+         border-top:3px solid rgb(26, 26, 26);
         position: relative;
         //background: black;
-        background: black;
-        &::after{
-          content: '';
-          width: 1px;
-          height: 30px;
-          background: blue;
-          position: absolute;
-          bottom: 0;
-          left: calc(50%);
-          border-radius: 50%;
-          z-index: -1;
-          box-shadow: 0px 0px 3px 1px blue;
-          animation: lineforinfo 2s infinite;
-        }
-
+        background: linear-gradient(170deg,rgb(27, 27, 27),black);
+       overflow: hidden;
+       transition: all .2s ease;
+      
+       &:hover{
+            filter: brightness(1.4);
+            cursor: pointer;
+            transform: scale(1.03);
+       }
+   &::after{
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.281);
+    filter: blur(30px);
+    left: calc(50% - 25px);
+    bottom: 50%;
+   }
 
       }
+   
+      &_desc{
+        font-size: 10px;
+        width: 80%;
+        border: 1px solid rgb(26, 26, 26);
+        padding: 10px;
+        border-radius: 10px;
+        color: rgb(173, 173, 173);
+      }
+
     }
 
 
@@ -413,6 +437,7 @@
 }
 
 .form{
+   background: black;
     animation: blink 3s 1;
     width: 500px;
     height: 80vh;
@@ -422,15 +447,16 @@
 
     overflow: hidden;
 
-    background: black;
+  
     justify-content: center;
     gap: 30px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(30px);
     position: fixed;
     top: calc(50% - 40vh);
     border-radius: 5px;
 
-    z-index: 1001 !important;
+    z-index: 100;
+
 
 
   &_close{
@@ -500,6 +526,7 @@ transition: all .3s ease;
         border: none;
         text-align: center;
         color: white;
+        backdrop-filter: blur(10px);
         box-shadow:  0px 0px 3px rgb(0, 0, 99);
         border-radius: 10px;
         backdrop-filter: blur(30px);
@@ -533,94 +560,15 @@ transition: all .3s ease;
 }
 
 
-.bot{
-    position: fixed;
-    z-index: 1000 !important;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: infinityPath 3s ease-in-out;
-     transition: all .2s ease;
-    opacity: 0.5;
-    cursor: pointer;
-    &:hover{
-       opacity: 1;
-       transform: translateY(-10px) translateX(-50%);
-    }
+.back{
+  width: 100vw;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  z-index:-1;
+  top: 0;
+}
 
-    &_sent{
-      display: flex;
-      justify-content: space-evenly;
-      flex-direction: column;
-      align-items: center;
-      animation: fadeout 5s 1;
-      color: white;
-      text-transform: uppercase;
-
-
-      font-size: 10px;
-      text-align: center;
-      align-content: center;
-      letter-spacing: 1px;
-      backdrop-filter: blur(10px);
-      position: fixed;
-       width: 30vw;
-       left: calc(50% - 15vw);
-       top: calc(50% - 15%);
-       height:30%;
-       background-color: rgba(0, 0, 0, 0.1);
-       box-shadow: 0px 0px 5px rgb(0, 0, 102);
-       border-radius: 15px;
-       overflow: hidden;
-
-
-       &::after{
-        animation: linetoright 5s infinite;
-        content: '';
-        width:300px;
-        height: 1px;
-        background-color: blue;
-        box-shadow: 0px 0px 5px 1px blue;
-        position: absolute;
-        top: 0;
-        left:0;
-       }
-
-       &::before{
-        animation: linetoleft 5s infinite;
-        content: '';
-        width: 300px;
-        height: 1px;
-        background-color: blue;
-        box-shadow: 0px 0px 5px 1px blue;
-        position: absolute;
-        bottom: 0;
-        right:0;
-       }
-    }
-
-    & img{
-            width: 100px;
-
-        }
-       &:after{
-          content: 'Привет!Если возникли вопросы нажми на меня!';
-          text-align: center;
-          align-content: center;
-          color: black;
-          font-size: 12px;
-          width: 150px;
-          font-family: monospace;
-          height: 50px;
-          border-radius: 5px;
-          background-color: white;
-          position: absolute;
-          top: -40%;
-          left:60%;
-          animation: blinkbot 10s 1 forwards;
-        }
-
-    }
 
 @keyframes aboutcard{
   0% {
@@ -952,38 +900,15 @@ transition: all .3s ease;
 
 @media screen and (max-width:600px){
 
-    .bot{
-      z-index: 1000 !important;
-        position: absolute;
-        bottom: 1%;
-        right: 0;
-        width: 50px;
-
-&_sent{
-   width: 90vw;
-   left: calc(50% - 45vw);
-   height: 150px;
-   backdrop-filter: blur(5px);
-
-   &::after{
-
-    width: 90vw;
-   }
-}
-
-        &:after{
-           top: -50%;
-           left:70% ;
-        }
-        & img{
-            width: 60px;
-        }
-    }
-
+   
 
 
 
    .starcode{
+
+   &_start{
+    
+   }
 
    .bot{
     position: fixed;
@@ -1064,14 +989,20 @@ transition: all .3s ease;
      }
 
   &_info{
-
+    
+    &_head{
+     text-align: center;
+    }
     &_cardcontainer{
-      margin-top: 10vh;
+      margin-top: 5vh;
+      padding-top: 5vh;
       width: 100vw;
       flex-direction: column;
       justify-content: flex-start;
       gap: 7vh;
-      min-height: 300vh;
+      min-height: 250vh;
+      overflow: hidden;
+
     }
   }
 
@@ -1107,10 +1038,11 @@ transition: all .3s ease;
      }
 
      &_start{
-        font-size: 0.6rem;
-        height: 30px;
-        width: 110px;
-         border-radius: 3px;
+        font-size: 0.8rem;
+        height: 45px;
+        width: 140px;
+         border-radius: 5px;
+        animation: conic 10s infinite;
      }
 
 

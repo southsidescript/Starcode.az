@@ -1,9 +1,10 @@
 import styles from "@/styles/global.module.scss";
-
+import Waves from "@/app/Anim/block/Backgrounds/Waves/Waves";
 const About = () => {
     return (
 
         <section className={styles.starcode_about}>
+             
 
             <div className={styles.starcode_about_head}>
 

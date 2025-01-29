@@ -1,5 +1,6 @@
 import styles from "@/styles/global.module.scss";
 import Bot from "@/app/Components/Bot/Bot";
+import Link from "next/link";
 
 const  Main = () => {
 
@@ -18,10 +19,12 @@ const  Main = () => {
                 Texnologiyalar dünyasını kəşf et — gələcəyini təmin et
             </div>
 
+ <Link href={'#info'}>
+ <button className={styles.starcode_start}>Ilk addimini et</button>
+ </Link>
+            
 
-            <button className={styles.starcode_start}>Ilk addimini et</button>
-
-            <Bot/>
+          
         </div>
     )
 }

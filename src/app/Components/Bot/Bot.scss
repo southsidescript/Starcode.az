@@ -1,6 +1,178 @@
 
+.bot{
+    position: fixed;
+    z-index: 1000 !important;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: infinityPath 3s ease-in-out;
+     transition: all .2s ease;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover{
+       opacity: 1;
+       transform: translateY(-10px) translateX(-50%);
+    }
+
+    &_sent{
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeout 5s 1;
+      color: white;
+      text-transform: uppercase;
+
+
+      font-size: 10px;
+      text-align: center;
+      align-content: center;
+      letter-spacing: 1px;
+      backdrop-filter: blur(10px);
+      position: fixed;
+       width: 30vw;
+       left: calc(50% - 15vw);
+       top: calc(50% - 15%);
+       height:30%;
+       background-color: rgba(0, 0, 0, 0.1);
+       box-shadow: 0px 0px 5px rgb(0, 0, 102);
+       border-radius: 15px;
+       overflow: hidden;
+
+
+       &::after{
+        animation: linetoright 5s infinite;
+        content: '';
+        width:300px;
+        height: 1px;
+        background-color: blue;
+        box-shadow: 0px 0px 5px 1px blue;
+        position: absolute;
+        top: 0;
+        left:0;
+       }
+
+       &::before{
+        animation: linetoleft 5s infinite;
+        content: '';
+        width: 300px;
+        height: 1px;
+        background-color: blue;
+        box-shadow: 0px 0px 5px 1px blue;
+        position: absolute;
+        bottom: 0;
+        right:0;
+       }
+    }
+
+    & img{
+            width: 100px;
+
+        }
+       &:after{
+          content: 'Привет!Если возникли вопросы нажми на меня!';
+          text-align: center;
+          align-content: center;
+          color: black;
+          font-size: 12px;
+          width: 150px;
+          font-family: monospace;
+          height: 50px;
+          border-radius: 5px;
+          background-color: white;
+          position: absolute;
+          top: -40%;
+          left:60%;
+          animation: blinkbot 10s 1 forwards;
+        }
+
+    }
+
+
+    @media screen and (max-width:600px){
+      .bot{
+
+        z-index: 1000 !important;
+          position: fixed;
+          bottom: 10%;
+          right: 0;
+          width: 50px;
+  
+  &_sent{
+     width: 90vw;
+     left: calc(50% - 45vw);
+     height: 150px;
+     backdrop-filter: blur(5px);
+  
+     &::after{
+  
+      width: 90vw;
+     }
+  }
+  
+          &:after{
+             top: -50%;
+             left:70% ;
+          }
+          & img{
+              width: 60px;
+          }
+      }
+  
+    }
+
+
+    @keyframes blinkbot{
+        0%{
+          opacity: 0;
+        }
+        40%{
+          opacity: 0;
+        }
+        50%{
+          opacity: 1;
+        }
+        90%{
+          opacity: 1;
+        }
+        100%{
+          opacity: 0;
+        }
+      }
 
 
 
+    @keyframes infinityPath {
+        0% {
+            opacity: 1;
+          transform: translate(-50%, 0) rotate(0deg) scale(5); /* Начало анимации */
+          bottom: -100px;
+          left: 50%;
+        }
+        25% {
+            opacity: 1;
+          transform: translate(200px, -200px) rotate(180deg) scale(3); /* Четверть пути */
+          bottom: 50%;
+          left: 50%;
+        }
+        50% {
+            opacity: 1;
+          transform: translate(0, -100%) rotate(360deg) scale(2); /* Половина пути */
+          bottom: 100%;
+          left: 50%;
+        }
+        75% {
+            opacity: 1;
+          transform: translate(-200px, 200px) rotate(540deg)  scale(1); /* Три четверти пути */
+          bottom: 50%;
+          left: 50%;
+          opacity: 1;
+        }
+        100% {
+          transform: translate(0, 0) rotate(0deg)  scale(1) translateX(-50%); /* Завершающий цикл */
+          bottom: 0;
+          left: 50%;
+          opacity: 0.5;
+        }
 
-
+      }

@@ -68,7 +68,7 @@ const Bot = () => {
     
 
     return ( <>
-    <div className={style.bot} onClick={()=>{
+    <div className={'bot'} onClick={()=>{
         setForm(!form)
     }}  /*onClick={sendRequest}*/>
        
@@ -83,7 +83,7 @@ const Bot = () => {
                  sendMessage={sendMessage}
                  />:''}
 
-{sent?   <div className={style.bot_sent}>
+{sent?   <div className={'bot_sent'}>
           {/* <img src="./bot/bot-v2.png" alt="" /> */}
           <h4>Ваше сообщение успешно отправлено </h4><Image 
                src='/mark.png'

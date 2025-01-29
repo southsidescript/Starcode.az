@@ -2,28 +2,39 @@
 
 const data = [
     {  id:1,
-        name:'HTML5',
-        description:'HTML (HyperText Markup Language) veb səhifələrinin qurulması üçün istifadə olunan standart işarələmə dilidir. HTML, veb səhifələrində mətn, şəkil, video və digər media elementlərinin təşkilini təmin edən bir dil olaraq, veb inkişafında əsas rola malikdir.'
+        name:'JSON',
+        description:'HTML (HyperText Markup Language) veb səhifələrinin qurulması üçün istifadə olunan standart işarələmə dilidir.',
+        ico:'./icons/json.svg'
     },
     {   id:2,
-        name:'CSS3',
-        description:'CSS (Cascading Style Sheets) — veb səhifələrinin dizaynını və tərtibatını müəyyən etmək üçün istifadə olunan bir dildir. CSS HTML sənədlərinə tətbiq olunaraq, səhifənin görünüşünü və layoutunu tənzimləyir. CSS ilə rənglər, şriftlər, mətnin ölçüləri, obyektlərin yerləşməsi, animasiyalar və bir çox digər dizayn elementləri dəyişdirilə bilər.'
+        name:'Vercel',
+        description:'CSS (Cascading Style Sheets) — veb səhifələrinin dizaynını və tərtibatını müəyyən etmək üçün istifadə olunan bir dildir.',
+          ico:'./icons/vercel_dark.svg'
     },
     {   id:3,
         name:'JavaScript',
-        description:'JavaScript (JS) — dinamik və interaktiv veb səhifələrinin yaradılması üçün istifadə olunan proqramlaşdırma dilidir. JavaScript, HTML və CSS ilə birlikdə veb inkişafının əsas üçlüyünü təşkil edir. HTML səhifənin strukturunu, CSS səhifənin dizaynını müəyyən edir, JavaScript isə veb səhifəsinin funksionallığını və interaktivliyini təmin edir.'
+        description:'JavaScript (JS) — dinamik və interaktiv veb səhifələrinin yaradılması üçün istifadə olunan proqramlaşdırma dilidir.',
+         ico:'./icons/javascript.svg'
     },
     {   id:4,
-        name:'Sass',
-        description:'JavaScript (JS) — dinamik və interaktiv veb səhifələrinin yaradılması üçün istifadə olunan proqramlaşdırma dilidir. JavaScript, HTML və CSS ilə birlikdə veb inkişafının əsas üçlüyünü təşkil edir. HTML səhifənin strukturunu, CSS səhifənin dizaynını müəyyən edir, JavaScript isə veb səhifəsinin funksionallığını və interaktivliyini təmin edir.'
+        name:'Express Js',
+        description:'Sass — CSS üçün preprosessordur, kodu daha strukturlaşdırılmış və yazımı daha rahat edir. ',
+        ico:'./icons/expressjs_dark.svg'
     },
     {   id:5,
         name:'Obsidian',
-        description:'JavaScript (JS) — dinamik və interaktiv veb səhifələrinin yaradılması üçün istifadə olunan proqramlaşdırma dilidir. JavaScript, HTML və CSS ilə birlikdə veb inkişafının əsas üçlüyünü təşkil edir. HTML səhifənin strukturunu, CSS səhifənin dizaynını müəyyən edir, JavaScript isə veb səhifəsinin funksionallığını və interaktivliyini təmin edir.'
+        description:'Obsidian MD — güclü və çevik qeydlər aparma proqramıdır, əsasən Markdown formatından istifadə edir.',
+         ico:'./icons/obsidian.svg'
     },
     {   id:6,
-        name:'React',
-        description:'JavaScript (JS) — dinamik və interaktiv veb səhifələrinin yaradılması üçün istifadə olunan proqramlaşdırma dilidir. JavaScript, HTML və CSS ilə birlikdə veb inkişafının əsas üçlüyünü təşkil edir. HTML səhifənin strukturunu, CSS səhifənin dizaynını müəyyən edir, JavaScript isə veb səhifəsinin funksionallığını və interaktivliyini təmin edir.'
+        name:'React x Next.js',
+        description:'React.js — istifadəçi interfeysləri yaratmaq üçün JavaScript kitabxanasıdır. O, komponent əsaslı yanaşma ilə işləyir və interfeysin hissələrini təkrar istifadə etməyə imkan verir.',
+        ico:'./icons/nextjs_dark.svg'
+    },
+    {   id:7,
+        name:'AI Helpers',
+        description:'Süni intellekt (AI) veb inkişafında getdikcə daha çox rol oynayır və bir çox sahədə prosesi sürətləndirir. ',
+         ico:'./icons/openai_dark.svg'
     }
 
 
