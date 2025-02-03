@@ -65,10 +65,7 @@
        }
     }
 
-    & img{
-            width: 100px;
-
-        }
+  
        &:after{
           content: 'Привет!Если возникли вопросы нажми на меня!';
           text-align: center;
@@ -91,13 +88,7 @@
 
     @media screen and (max-width:600px){
       .bot{
-
         z-index: 1000 !important;
-          position: fixed;
-          bottom: 10%;
-          right: 0;
-          width: 50px;
-  
   &_sent{
      width: 90vw;
      left: calc(50% - 45vw);
@@ -114,9 +105,7 @@
              top: -50%;
              left:70% ;
           }
-          & img{
-              width: 60px;
-          }
+        
       }
   
     }

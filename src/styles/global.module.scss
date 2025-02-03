@@ -11,7 +11,7 @@
 
 
 
-
+//EDU SIDE
 .eduside{
     display: flex;
     align-items: center;
@@ -55,14 +55,10 @@
 
   }
 
-  .eduside:hover{
+.eduside:hover{
   font-size: 110%;
 
   }
-
-
-
-
 .beam{
     width: 1px;
     height: 100vh;
@@ -73,7 +69,7 @@
     animation: slowUp 3s 1;
 }
 
-
+//EFFECTS
 .bubble{
     width: 20px;
     height: 20px;
@@ -88,25 +84,100 @@
 }
 
 
+.chart{
+  
+   height: 80vh;
+   display: flex;
+   gap: 30px;
+   flex-direction: column;
+   align-items: center;
+   justify-content:space-evenly ;
+
+   & h3{
+    font-size: 4rem;
+   }
+   &_title{
+     width: 50vw;
+     letter-spacing: 1px;
+     text-align: center;
+     font-size: 1.2rem;
+     color: rgb(99, 99, 99);
+
+   }
+
+   &_stats{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+     &_purple{
+      width: 30px;
+      height: 30px;
+      background-color: #82ca9d;
+      position: relative;
+      &::after{
+        width: 200px;
+        height: 40px;
+        top: 20%;
+        content: '- Starcode';
+        position: absolute;
+        left: 150%;
+      }
+     }
+
+     &_cyan{
+      width: 30px;
+      height: 30px;
+      background-color: #8884d8;
+       position: relative;
+      &::after{
+        width: 200px;
+        height: 40px;
+        top: 20%;
+        content: '- Digər kurslar';
+        position: absolute;
+        
+        left: 150%;
+      }
+     }
+     
+   }
+
+}
+
+
+
+//PRIMARY PAGES
+
 .starcode{
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
     align-items: center;
     min-height: 100vh;
-
+    & header{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      margin: 0 auto;
+  
+     }
 
   &_about{
    
     min-height: 100vh;
     display: flex;
     margin-bottom: 100px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     &_modules{
       position: relative;
 
       width: 100vw;
-      margin-top: 200px;
+      margin-top: 100px;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -191,14 +262,14 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      height: 40vh;
+  
    
       &_heading{
-        font-size:34px;
+        font-size:3rem;
         position: relative;
         font-family: "Poppins", serif;
-  font-weight: 500;
-  font-style: normal;
+     font-weight: 500;
+       font-style: normal;
 
 
 
@@ -206,161 +277,15 @@
       }
     }
 
+  
 
 
-    &_box{
-      &:hover{
-         animation-play-state: paused;
-       }
-      width: 200px;
-      height: 200px;
-      transform-style:preserve-3d ;
-      position: relative;
-      animation: carousel 20s linear infinite;
-
-
-
-  & span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: center;
-    transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i) *45deg)) translateZ(400px);
-
-    border-radius: 18px;
-
-    // box-shadow: 0px 0px 3px white;
-    // backdrop-filter: blur(10px);
-
-    & img{
-
-      position: absolute;
-      width: 60%;
-      height: 60%;
-      top: 25%;
-      left: 25%;
-
-
-
-
-
-    }
-  }
-
-    }
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  &_info{
-
-    position: relative;
-    min-height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-
-
-    &_head{
-      text-align: left;
-      font-family: serif;
-      font-family: "Poppins", serif;
-      font-size: 2rem;
-    }
-
-    &_cardcontainer{
-
-      display: flex;
-    padding-top: 5%;
-      justify-content: space-around;
-      align-items: center;
-     min-height: 100vh;
-      width: 70vw;
-      gap: 3%;
-      flex-wrap: wrap;
-      
-
-    }
-    &_card{
 
     
 
-      &_icon{
-      
-        text-align: center;
-        align-content: center;
-        font-family: Poppins;
-        width: 250px;
-        height: 250px;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: center;
-         border-top:3px solid rgb(26, 26, 26);
-        position: relative;
-        //background: black;
-        background: linear-gradient(170deg,rgb(27, 27, 27),black);
-       overflow: hidden;
-       transition: all .2s ease;
-      
-       &:hover{
-            filter: brightness(1.4);
-            cursor: pointer;
-            transform: scale(1.03);
-       }
-   &::after{
-    position: absolute;
-    content: '';
-    width: 50px;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 0.281);
-    filter: blur(30px);
-    left: calc(50% - 25px);
-    bottom: 50%;
-   }
-
-      }
-   
-      &_desc{
-        font-size: 10px;
-        width: 80%;
-        border: 1px solid rgb(26, 26, 26);
-        padding: 10px;
-        border-radius: 10px;
-        color: rgb(173, 173, 173);
-      }
-
-    }
-
-
-
   }
 
-//    background-image: linear-gradient(150deg,rgba(78, 0, 180, 0.315),rgb(0, 0, 0));
-    // backdrop-filter: blur(75px);
-   & header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto;
-
-   }
-
-
-
-
-
-    &_heading{
+  &_heading{
 
         display: flex;
         align-items: center;
@@ -377,14 +302,12 @@
         animation: fade 4s 1;
 
         &_design{
-            width: 85px;
             margin-top: 20%;
             animation: rotating 15s infinite linear;
             opacity: .9;
         }
     }
-
-    &_main{
+   &_main{
 
         z-index: 0;
         width: 100%;
@@ -396,12 +319,10 @@
         flex-direction: column;
         background-image: radial-gradient(ellipse 200px 600px at top ,rgba(0, 0, 255, 0.932),transparent),
         radial-gradient(ellipse 250px 250px at 50% 60% ,rgb(0, 0, 255),black,transparent );
-
         &::after{
           position: absolute;
           backdrop-filter: blur(55px);
           z-index: -1;
-
           content: "";
           width: 100vw;
           height: 100vh;
@@ -410,19 +331,19 @@
 
     }
 
-    &_title{
+  &_title{
         font-family: "Roboto Mono", serif;
     }
-
     &_start{
         box-shadow: 0px 0px 5px rgb(0, 90, 90);
         min-width: 80px;
         width: 8vw;
-        font-size: .8rem;
-        height: 40px;
+        font-size: .9rem;
+        
+        height: 50px;
         border-radius: 8px;
         background: none;
-        background-image: linear-gradient(120deg,rgb(0, 97, 76),black,rgb(70, 0, 70));
+        background-image: linear-gradient(120deg,white 0,1%,rgb(68, 0, 255));
         transition: all .2s ease;
         border: none;
         color: white;
@@ -433,6 +354,100 @@
         }
 
 
+    }
+
+    &_info{
+      position: relative;
+      min-height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      &_head{
+        text-align: left;
+        font-family: serif;
+        font-family: "Poppins", serif;
+        font-size: 2.5rem;
+        font-weight: normal;
+        margin: 15vh 0;
+      }
+      
+      &_cardcontainer{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 3vh;
+        width: 1000px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+       
+      &_card{
+        border-top: 2px solid rgb(17, 17, 17);
+        width: 350px; 
+        height: 450px;
+        padding: 1% ;
+        border-radius: 30px;
+        background: linear-gradient(150deg,rgb(15, 15, 15),black);
+        filter: brightness(1.5);
+        transition: all .2s ease;
+        &_head{
+           height: 10%;
+           display: flex;
+           width: 95%;
+           justify-content: flex-end;
+           
+           &_mark{
+            width: 14%;
+            height: 18px;
+            border-radius: 10px;
+            background-color: green;
+            font-size: 12px;
+            text-align: center;
+            align-content: center;
+            font-weight: normal;
+           }
+        }
+     
+        &_heading{
+          font-size: 1.5rem;
+          width: 80%;
+          height: 10%;
+          
+          margin: 0 auto;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        &_body{
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          padding: 15px;
+          color: white;
+         & div{
+           border: 1px solid rgb(44, 44, 44);
+           border-radius: 15px;
+           width: 80px;
+           padding: 5px;
+           align-items: center;
+           display: flex;
+           justify-content: space-between;
+          & span{
+            font-size: 0.8rem;
+            color: rgb(128, 128, 128);
+          }
+         }
+          
+        }
+        &:hover{
+          transform: translateY(-10px) scale(1.02);
+        }
+      }
+  
+     
+  
+  
+  
     }
 }
 
@@ -559,16 +574,49 @@ transition: all .3s ease;
 
 }
 
-
-.back{
+.infoline{
+  min-height: 200px;
   width: 100vw;
-  position: absolute;
-  height: 100%;
-  left: 0;
-  z-index:-1;
-  top: 0;
-}
+  border-radius: 10px;
+  padding: 20px 0;  
+  background-color: rgb(5, 5, 5 );
 
+  &_container{
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin:0 auto;
+  }
+
+  &_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    width: 150px;
+    height: 150px;
+     position: relative;
+    // &:after{
+    // position: absolute;
+    // content: '';
+    // width: 1px;
+    // height: 100px;
+    // background-color: rgb(46, 46, 46);
+    // right: -50%;
+    // }
+
+     & h4{
+      font-size: 3rem;
+     }
+     & p{
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      color: gray;
+      text-transform: uppercase; 
+     }
+  }
+}
 
 @keyframes aboutcard{
   0% {
@@ -594,14 +642,6 @@ transition: all .3s ease;
 
 }
 
-@keyframes carousel{
-      0%{
-        transform: perspective(1000px) rotateY(0deg);
-      }
-      100%{
-        transform: perspective(1000px) rotateY(360deg);
-      }
-    }
 
 @keyframes linetoleft{
         0%{
@@ -638,7 +678,6 @@ transition: all .3s ease;
           opacity: 0;
         }
       }
-
 
 @keyframes lineforinfo{
   0%{
@@ -872,52 +911,18 @@ transition: all .3s ease;
 }
 
 
-@keyframes conic{
-  0%{
- box-shadow: 0px 2px 15px blue,
-      0px -2px 15px red;
-  }
-  25%{
-    box-shadow: 2px 0px 25px blue,
-    -2px 0px 25px white;
-   }
 
-  50%{
-    box-shadow: 0px -2px 15px blue,
-    0px 2px 15px white;
-  }
-
-  75%{
-    box-shadow: 0px 2px 15px blue,
-    0px -2px 15px white;
-  }
-  100%{
-    box-shadow: 0px 2px 25px blue,
-    0px -2px 25px red;
-  }
-}
 
 
 @media screen and (max-width:600px){
 
    
-
-
-
    .starcode{
-
-   &_start{
-    
-   }
-
    .bot{
     position: fixed;
     z-index: 1001 !important;
 
    }
-
-
-
    .form{
     position: fixed;
     width: 100vw;
@@ -937,6 +942,7 @@ transition: all .3s ease;
       font-size: 25px ;
       width: 200px;
       text-align: center;
+     
      }
 
   }
@@ -945,12 +951,11 @@ transition: all .3s ease;
             width: 100px;
             height: 100px;
 
-
-
             & span{
               transform: rotateY(calc(var(--i) *45deg)) translateZ(180px);
-           width: 90px;
-           height: 90px;
+              width: 90px;
+              height: 90px;
+              
               & img{
                 width: 40px;
                 height: 40px;
@@ -993,17 +998,11 @@ transition: all .3s ease;
     &_head{
      text-align: center;
     }
-    &_cardcontainer{
-      margin-top: 5vh;
-      padding-top: 5vh;
-      width: 100vw;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 7vh;
-      min-height: 250vh;
-      overflow: hidden;
 
+    &_cardcontainer{
+      flex-direction: column;
     }
+ 
   }
 
     &_main{
@@ -1042,11 +1041,32 @@ transition: all .3s ease;
         height: 45px;
         width: 140px;
          border-radius: 5px;
-        animation: conic 10s infinite;
+       
      }
 
 
 
+   }
+  .chart{
+    & h3{
+      text-align: center;
+    }
+
+    &_title{
+      font-size: 1rem;
+      width: 90vw;
+    }
+  }
+
+   .infoline{
+    display: flex;
+    min-height: 100vh;
+   
+    &_container{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
    }
 
 

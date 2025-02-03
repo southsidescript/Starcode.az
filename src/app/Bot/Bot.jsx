@@ -1,10 +1,13 @@
 'use client'
 
-import style from '../../../styles/global.module.scss'
+import style from '@/styles/global.module.scss'
 import { useState } from 'react';
 import './Bot.scss'
-import Form from '../Form/Form';
+import Form from '../Components/Form/Form';
 import Image from 'next/image';
+import ServerImage from '../Components/ServerImage/ServerImage';
+
+
 const Bot = () => {
      
     const [bot,setBot] = useState({
@@ -72,7 +75,13 @@ const Bot = () => {
         setForm(!form)
     }}  /*onClick={sendRequest}*/>
        
-           <img src="./bot/bot-v1.png" alt="" />
+       <ServerImage
+       src={'/bot/bot-v1.png'}
+       width={100}
+       height={100}
+       alt='bot'
+       />
+       
         </div>
      
      {form?  <Form

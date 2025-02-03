@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Starcode",
-  description: "Welcome to University of future",
+  description: "Starcode Academy.It courses",
 };
 
 export default function RootLayout({ children }) {

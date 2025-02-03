@@ -1,13 +1,13 @@
 'use client'
 import react, { useEffect, useState } from "react";
-import Bot from "../Components/Bot/Bot";
+import Bot from "../Bot/Bot";
 import styles from '../../styles/global.module.scss'
 import Form from "../Components/Form/Form";
-import AboutCard from "@/app/Components/AboutCard/AboutCard";
+import AboutCard from "@/app/Components/InfoCard/InfoCard";
 
-import Main from '../Components/Main/Main'
-import About from '../Components/About/About'
-import Info from '../Components/Info/Info'
+import Main from '../Main/Main'
+import About from '../About/About'
+import Info from '../Info/Info'
 
 
 
@@ -23,7 +23,6 @@ const Starcode = () => {
 
 
            <Main/>
-          
            <Bot/>
            <About/>
            <Info/>
