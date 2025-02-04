@@ -46,6 +46,10 @@ const data = [
         {
             ico:'/icons/npm.svg',
             name:'npm', 
+        },
+        {
+            ico:'/icons/json.svg',
+            name:'JSON', 
         }
         
      ]
