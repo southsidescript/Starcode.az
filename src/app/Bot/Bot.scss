@@ -22,47 +22,21 @@
       animation: fadeout 5s 1;
       color: white;
       text-transform: uppercase;
-
-
-      font-size: 10px;
-      text-align: center;
-      align-content: center;
-      letter-spacing: 1px;
-      backdrop-filter: blur(10px);
-      position: fixed;
-       width: 30vw;
-       left: calc(50% - 15vw);
-       top: calc(50% - 15%);
-       height:30%;
-       background-color: rgba(0, 0, 0, 0.1);
-       box-shadow: 0px 0px 5px rgb(0, 0, 102);
-       border-radius: 15px;
+       font-size: 10px;
+       text-align: center;
+       align-content: center;
+       letter-spacing: 1px;
+       backdrop-filter: blur(10px);
+       border-top: 2px solid rgb(30, 30, 30);
+       background: linear-gradient(160deg,rgb(26, 26, 26),black) ;
+       position: fixed;
+       width: 300px;
+       left: calc(50% - 150px);
+       top: calc(50% - 150px);
+       height:200px;
+      filter: brightness(1.5);
+       border-radius: 35px;
        overflow: hidden;
-
-
-       &::after{
-        animation: linetoright 5s infinite;
-        content: '';
-        width:300px;
-        height: 1px;
-        background-color: blue;
-        box-shadow: 0px 0px 5px 1px blue;
-        position: absolute;
-        top: 0;
-        left:0;
-       }
-
-       &::before{
-        animation: linetoleft 5s infinite;
-        content: '';
-        width: 300px;
-        height: 1px;
-        background-color: blue;
-        box-shadow: 0px 0px 5px 1px blue;
-        position: absolute;
-        bottom: 0;
-        right:0;
-       }
     }
 
   
@@ -164,4 +138,19 @@
           opacity: 0.5;
         }
 
+      }
+
+      @keyframes fadeout{
+        0%{
+          opacity: 0;
+        }
+        20%{
+          opacity: 1;
+        }
+        60%{
+          opacity: 1  ;
+        }
+        100%{
+          opacity: 0;
+        }
       }

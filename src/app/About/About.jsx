@@ -1,14 +1,18 @@
 import styles from "@/styles/global.module.scss";
-import Chart from "../Components/Chart/Chart";
-import AboutCard from "../Components/AboutCard/AboutCard";
-import InfoLineCard from "../Components/InfoLineCard/InfoLineCard";
+import Chart from "../Components/organisms/Chart/Chart";
+import AboutCard from "../Components/organisms/AboutCard/AboutCard";
+import InfoLineCard from "../Components/molecules/InfoLineCard/InfoLineCard";
 import Image from "next/image";
 const About = () => {
     return (
 
         <section className={styles.starcode_about}>
             
-            <div className={styles.starcode_about_head_heading}> Proqramlaşdırma modulları</div>
+            <div className={styles.starcode_about_head_heading}>
+                 Proqramlaşdırma modulları
+                 <p >Özünüz üçün təhsil metodu seçin</p>
+                 </div>
+
           
             <div className={styles.starcode_about_modules}>
                 <AboutCard title='Pulsuz'  desc='Tanışlıq üçün ilk sınaq dərsi' price='0' />

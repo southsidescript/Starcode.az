@@ -67,11 +67,26 @@ const data = [
         name:'React Js',
     }]
 },
-{
+{   
+    mark:'base',
+    heading:'Digər',
     body:[{
-        ico:'/openai_dark.svg',
+        ico:'/icons/openai_dark.svg',
         name:'OpenAI',
-    }]
+    },
+    {
+        ico:'/icons/obsidian-icon.png',
+        name:'Obsidian',
+    },
+    {
+        ico:'/icons/babel.svg',
+        name:'Babel',
+    },
+    {
+        ico:'/icons/git.svg',
+        name:'Git',
+    }
+]
 }
 ]
 

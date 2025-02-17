@@ -1,4 +1,4 @@
-import Eduside from "../Components/EduSide/Eduside";
+import Eduside from "../Components/pages/EduSide/Eduside";
 import style from "../../styles/global.module.scss";
 
 

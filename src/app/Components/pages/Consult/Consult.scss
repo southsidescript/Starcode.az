@@ -1,0 +1,51 @@
+.consult{
+
+    width: 90vw;
+    height: 34vh;
+    background: linear-gradient(100deg,rgb(0, 18, 175),black,rgb(24, 24, 24));
+    margin: 100px auto;
+    padding: 20px;
+    border-radius:30px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &_title{
+        & h2{
+            font-size: 2.5rem;
+            text-decoration-color: red;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .consult{
+     &_title{
+         & h2{
+            font-size: 2rem;
+         }
+         & p{
+
+            font-size: 0.8rem;
+         }
+     }
+
+    }
+}
+
+
+@media screen and (max-width:380px) {
+    .consult{
+     &_title{
+         & h2{
+            font-size: 1.5rem;
+         }
+         & p{
+
+            font-size: 0.7rem;
+         }
+     }
+
+    }
+}
