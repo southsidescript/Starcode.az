@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "StarCode Edu",
-  description: "Starcode ",
+  description: "Изучайте IT, программирование и веб-разработку с профессиональными наставниками в Starcode. ",
   other: {
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
@@ -29,6 +29,11 @@ export const metadata = {
       "telephone": "+994 50 832 22 44"
     }),
   },
+  icons: {
+    icon: "/icons/starcode.png",
+    shortcut: "/icons/starcode.png",
+    apple: "/icons/starcode.png",
+  }
 };
 
 export default function RootLayout({ children }) {
