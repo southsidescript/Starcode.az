@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "StarCode Edu",
+  title: "Starcode Academy",
   description: "Изучайте IT, программирование и веб-разработку с профессиональными наставниками в Starcode. ",
   other: {
     "application/ld+json": JSON.stringify({

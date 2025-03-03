@@ -15,17 +15,18 @@
 .eduside{
     display: flex;
     align-items: center;
-    justify-content: center;
+
+    flex-direction: column;
     min-height: 100vh;
     width: 50vw;
     overflow: hidden;
     font-family: 'Orbitron','sans-serif';
     letter-spacing: 2px;
     position: relative;
-
     transition: all .5s ease;
     color: white;
-
+    justify-content: center;
+    gap: 10px;
     &_active{
         display: flex;
         align-items: center;
@@ -44,8 +45,8 @@
     }
 
     &_desc{
-        color: white;
-        position:absolute;
+         color: white;
+         position:absolute;
          top: 10vh;
          font-family: Arial;
          font-size: 12px;
@@ -471,6 +472,33 @@
   
   
     }
+
+    &_footer{
+        color: black;
+        padding: 1%;
+        min-height: 80vh;
+        width: 100%;
+        background: linear-gradient(150deg,rgb(255, 255, 255),rgb(211, 211, 211));
+        &_map{
+          border-radius: 10px;
+          width: 100%;
+          margin: 0 auto;
+          width: 80vw;
+          &_address{
+           
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+           & address{
+            font-style: normal;
+            
+           }
+          }
+        }
+
+    }
+    
 }
 
 .form{
@@ -640,6 +668,11 @@ transition: all .3s ease;
   }
 }
 
+
+
+
+
+
 @keyframes aboutcard{
   0% {
     box-shadow: 0 2px 25px rgba(255, 0, 0, 0.7),
@@ -664,7 +697,6 @@ transition: all .3s ease;
 
 }
 
-
 @keyframes linetoleft{
         0%{
           transform: translateX(300px);
@@ -673,7 +705,6 @@ transition: all .3s ease;
           transform: translateX(-35vw);
         }
       }
-
 @keyframes linetoright{
         0%{
           transform: translateX(-300px);
@@ -682,7 +713,6 @@ transition: all .3s ease;
           transform: translateX(35vw);
         }
       }
-
 @keyframes blinkbot{
         0%{
           opacity: 0;
@@ -700,7 +730,6 @@ transition: all .3s ease;
           opacity: 0;
         }
       }
-
 @keyframes lineforinfo{
   0%{
     transform: translateY(0);
@@ -749,7 +778,6 @@ transition: all .3s ease;
           }
 
         }
-
 @keyframes fade{
           0%{
             transform: scale(1.2);
@@ -763,9 +791,6 @@ transition: all .3s ease;
             opacity: 1;
           }
         }
-
-
-
 @keyframes line{
     0%{
       transform: translateY(-50px);
@@ -780,7 +805,6 @@ transition: all .3s ease;
         opacity: 0;
     }
 }
-
 @keyframes blink{
     0%{
         transform: translateY(-50px);
@@ -791,7 +815,6 @@ transition: all .3s ease;
         opacity: 1;
     }
 }
-
 @keyframes rotating{
   0%{
     transform: rotate(0deg);
@@ -800,7 +823,6 @@ transition: all .3s ease;
     transform: rotate(360deg);
   }
 }
-
 @keyframes rise{
  0%{
     transform: translateY(0);
@@ -816,7 +838,6 @@ transition: all .3s ease;
 
 
 }
-
 @keyframes slowUp{
     0%{
         opacity: 1;
@@ -834,7 +855,6 @@ transition: all .3s ease;
       width: 1px;
     }
 }
-
 @keyframes choise{
     0%{
         width: 50vw;
@@ -875,7 +895,6 @@ transition: all .3s ease;
 
 
 }
-
 @keyframes blur{
     0%{
         backdrop-filter: blur(150px);
@@ -895,7 +914,6 @@ transition: all .3s ease;
         backdrop-filter: blur(75px);
     }
 }
-
 @keyframes linetoout{
   0%{
     transform: translateX(-10vw);
@@ -904,7 +922,6 @@ transition: all .3s ease;
     transform: translateX(300vh);
   }
 }
-
 @keyframes metallic{
   
   0%{

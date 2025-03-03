@@ -1,24 +1,27 @@
-'use client'
-import Image from "next/image";
-import styles from "./page.module.scss";
-// import { redirect } from "next/navigation";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import style from '@/styles/global.module.scss'
+import Eduside from './Components/pages/EduSide/Eduside'
 
 export default function Home() {
-  const router = useRouter();
+  const data = [
+    {
+    name: 'EYECODE',
+    styles: 'eduside-left',
+    desc:'Онлайн обучение'
+    },
+    {
+       name: 'STARCODE',
+       styles: 'eduside-right',
+       desc:'Офлайн обучение'
+      }
+  ]
 
- useEffect(() => {
-    router.push('/edumode')
- },[])
 
-  
-   
+return(
+  <div className={style.edumode}>
+    <Eduside {...data[0]} />
+      <div className={style.beam}></div>
+    <Eduside {...data[1]}/>
+  </div>
 
-
-  return (
-    <div className={styles.page}>
-    </div>
-    
-  );
+)
 }
