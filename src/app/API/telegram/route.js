@@ -32,6 +32,7 @@ export async function POST(req) {
       const TELEGRAM_BOT_TOKEN = process.env.TOKEN;
       const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
      
+      
       users.forEach((value) => {
 
       })         
@@ -40,7 +41,7 @@ export async function POST(req) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          chat_id: users[2].id,
+          chat_id: users[0].id,
           text: message,
         }),
       });

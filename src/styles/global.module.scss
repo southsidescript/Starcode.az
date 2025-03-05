@@ -478,22 +478,61 @@
         padding: 1%;
         min-height: 80vh;
         width: 100%;
-        background: linear-gradient(150deg,rgb(255, 255, 255),rgb(211, 211, 211));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+       background: whitesmoke;
         &_map{
           border-radius: 10px;
-          width: 100%;
           margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          gap: 1vh;
           width: 80vw;
           &_address{
-           
+            background:linear-gradient(120deg,rgb(117, 117, 117) 0,1%,black);
+            border-radius: 5px;
+            color: white;
             min-height: 100px;
             display: flex;
             align-items: center;
             justify-content: space-around;
-           & address{
-            font-style: normal;
-            
+            height: 100px;
+           &_title{
+            color: rgb(0, 47, 255);
+            font-size: 1.2rem;
+            text-transform:none;
            }
+
+           & address{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+            font-style: normal;
+            font-size: 1rem;
+            font-weight: bold;
+           }
+          }
+        }
+
+        &_info{
+          
+          width: 80vw;
+          &_title{
+             gap: 1vw;
+             display: flex;
+             align-items: flex-end;
+              & h2{
+                font-size: 2rem;
+                text-transform: uppercase;
+              }
+             & img{
+              border-radius: 10px;
+              filter: drop-shadow(0px 0px 5px black);
+             }
           }
         }
 
@@ -1097,7 +1136,21 @@ transition: all .3s ease;
          border-radius: 5px;
        
      }
-
+     
+     &_footer{
+      &_map{
+        &_address{
+          &_title{
+            font-size: 1rem;
+          }
+          & address{
+            font-size: 0.7rem;
+          }
+  
+   
+        }
+      }
+     }
 
 
    }
@@ -1122,6 +1175,8 @@ transition: all .3s ease;
       justify-content: center;
     }
    }
+
+  
 
 
 }
