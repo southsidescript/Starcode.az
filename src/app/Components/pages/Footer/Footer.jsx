@@ -31,7 +31,7 @@ const Footer =  () => {
          <div className={style.starcode_footer_info}>
 
           <div className={style.starcode_footer_info_title} >
-            <Image src={'/icons/starcode.png'} alt={'starcode'} width={40} height={40}/>
+            <Image src={'/icons/starcode.png'} alt={'starcode'} width={30} height={30}/>
               <div>
               <h2>Starcode</h2>
              </div>

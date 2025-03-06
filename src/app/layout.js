@@ -30,9 +30,9 @@ export const metadata = {
     }),
   },
   icons: {
-    icon: "/icons/starcode.png",
-    shortcut: "/icons/starcode.png",
-    apple: "/icons/starcode.png",
+    icon: "/icons/starcode.jpg",
+    shortcut: "/icons/starcode.jpg",
+    apple: "/icons/starcode.jpg",
   }
 };
 
