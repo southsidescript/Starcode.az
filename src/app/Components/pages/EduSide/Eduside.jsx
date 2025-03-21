@@ -1,7 +1,7 @@
 'use client'
 import style from '@/styles/global.module.scss';
 import { useRef, useState } from 'react';
-import Bubble from '../../Bubble/Bubble';
+import Bubble from '../../atoms/Bubble/Bubble';
 import { useRouter } from 'next/navigation';
 
 const Eduside= (props) => {

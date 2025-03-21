@@ -33,9 +33,7 @@ export async function POST(req) {
       const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
      
       
-      users.forEach((value) => {
-
-      })         
+     
 
       const response = await fetch(TELEGRAM_API_URL, {
         method: "POST",

@@ -1,14 +1,10 @@
 import styles from "@/styles/global.module.scss";
-import Bot from "@/app/Bot/Bot";
 import Link from "next/link";
-import Image from "next/image";
 import HeaderTitle from "../../molecules/header-title/HeaderTitle";
 import ClassicButton from "../../atoms/classicButton/classicButton";
 
 const  Main = () => {
-    
-
- 
+  
 
     return (
         <div className={styles.starcode_main}>
@@ -23,7 +19,7 @@ const  Main = () => {
            
 
  <Link href={'#info'}>
-   <ClassicButton>Ilk addimini et</ClassicButton>
+   <ClassicButton>İlk addımı atın</ClassicButton>
  </Link>
             
 

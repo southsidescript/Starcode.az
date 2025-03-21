@@ -1,7 +1,7 @@
 'use client'
+
 import { useState, useEffect } from "react";
 import { ResponsiveContainer,AreaChart,XAxis,YAxis,CartesianGrid,Tooltip,Area} from "recharts";
-
 
 
 const Chart = () => {

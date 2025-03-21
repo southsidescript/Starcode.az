@@ -22,7 +22,7 @@ export const metadata = {
       "url": "https://www.starcode.az",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1 Fikret AmirovBaku",
+        "streetAddress": "1 Fikret Amirov Baku",
         "addressLocality": "Baku",
         "addressCountry": "AZ"
       },

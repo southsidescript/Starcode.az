@@ -7,6 +7,7 @@ const ServerImage = (props) => {
     width={props.width}
     height={props.height}
     alt={props.alt}
+    priority
   />
     )
 }

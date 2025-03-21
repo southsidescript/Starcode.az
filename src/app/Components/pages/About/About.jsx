@@ -1,9 +1,15 @@
+'use client'
 import styles from "@/styles/global.module.scss";
-import Chart from "../Components/organisms/Chart/Chart";
-import AboutCard from "../Components/organisms/AboutCard/AboutCard";
-import InfoLineCard from "../Components/molecules/InfoLineCard/InfoLineCard";
-import Image from "next/image";
+import AboutCard from "../../organisms/AboutCard/AboutCard";
+import InfoLineCard from "../../molecules/InfoLineCard/InfoLineCard";
+import dynamic from "next/dynamic";
+
+const  Chart = dynamic(()=>import("@/app/Components/organisms/Chart/Chart"),{ssr:false});
+
+
+
 const About = () => {
+   
     return (
 
         <section className={styles.starcode_about}>
@@ -35,7 +41,7 @@ const About = () => {
                 </div>
 
                 <div>
-                <Chart/>
+                  <Chart/>
                 </div>
             
                 </section>
@@ -47,7 +53,6 @@ const About = () => {
                               <InfoLineCard src='/icons/student-edu.png' count={32} title={'Məzun'}/>
                               <InfoLineCard src='/icons/award.png'  title={'Lisenziya'}/>
                               <InfoLineCard src='/icons/global.png' count={3} title={'ölkə'}/>
-                              
                     </div>   
                        
 
