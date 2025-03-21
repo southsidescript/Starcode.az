@@ -16,7 +16,7 @@ export async function GET(){
 
 export async function POST(req) {
     try {
-      const { chatId, message } = await req.json();
+      const {message } = await req.json();
  
       const users = [
                       {
