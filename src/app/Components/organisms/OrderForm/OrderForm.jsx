@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, CircleUser, AtSign, MessageCircle } from "lucide-react"
+import {PhoneCall, CircleUser, AtSign, MessageCircle } from "lucide-react"
 import styles from "./neo-futuristic-form.module.css"
 import ClassicButton from "../../atoms/classicButton/classicButton"
 export default function NeoFuturisticForm() {
@@ -11,6 +11,21 @@ export default function NeoFuturisticForm() {
     category: "design",
     message: "",
   })
+
+  async function sendMessageToTelegram(msg) {
+    console.log('Сообщение отправлено')
+      const res = await fetch("/API/telegram", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chatId: "688804750", // ID пользователя, которому отправляем сообщение
+          message: msg,
+        }),
+      });
+    
+      const data = await res.json();
+      console.log(data);
+    }
 
   const [focused, setFocused] = useState(null)
 
@@ -24,14 +39,20 @@ export default function NeoFuturisticForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+   
+    sendMessageToTelegram(`AD: ${formState.name}\nEMAIL: ${formState.email}\nKateqoriya: ${formState.category}\nMesaj: ${formState.message}`);
+ 
+
+
+
     console.log("Form submitted:", formState)
     // Add your form submission logic here
   }
 
   const categories = [
-    { id: "design", label: "UI Design" },
-    { id: "development", label: "Development" },
-    { id: "animation", label: "Animation" },
+    { id: "design", label: "Beginner" },
+    { id: "Intermediate", label: "Intermediate" },
+    { id: "Personal", label: "Personal modul" },
   ]
 
   return (
@@ -72,15 +93,15 @@ export default function NeoFuturisticForm() {
 
           <div className={styles.inputGroup}>
             <div className={`${styles.inputContainer} ${focused === "email" ? styles.focused : ""}`}>
-              <AtSign className={styles.inputIcon} />
+              <PhoneCall className={styles.inputIcon} />
               <input
                 id="email"
                 name="email"
-                type="email"
+                type="text"
                 value={formState.email}
                 onChange={handleChange}
                 className={styles.input}
-                placeholder="EMAIL"
+                placeholder="Əlaqə nömrəsi"
                 onFocus={() => setFocused("email")}
                 onBlur={() => setFocused(null)}
                 required
